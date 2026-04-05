@@ -5,15 +5,46 @@
         "title": "Fullstack Developer"
     },
     "intro": {
+    "title": "Let's work together!",
         "letswork": "I am a front-end developer living south of Much. For several years now, I have enjoyed realizing the ideas of designers and companies and accompanying their projects. Originally, I am at home in CSS and JavaScript, but currently I am mainly looking for challenges in Angular and React! Please contact me if this could be a good fit for you and we can talk about it."
     },
+    "navigation": {
+      "aboutme": "About me",
+      "skillset": "Skills",
+      "mywork": "My work"
+  
+  
+    },
+
+
     "myWork": {
+        "title": "My Work",
         "intro": "Below you will find an overview of my work.",
         "join": "Task management system based on the Kanban model. Creation and organization of tasks including drag and drop function as well as ticket assignment and category structure",
         "epl": "Jump and run game based on an object-oriented approach. Collecting coins, throwing objects and a special final boss fight!",
         "crm": "Simple customer relationship management system with CRUD function"
     },
+    "references": {
+    "title": "Need a teamplayer?",
+    "description": "Here is what my colleagues say about me.",
+    "ref1": {
+      "name": "James Rugman",
+      "project": "Project Join",
+      "text": "Sven is a reliable and friendly person. Work in a structured way and write a clear code. I highly recommend him as a colleague."
+    },
+    "ref2": {
+      "name": "Evelyn Marx",
+      "project": "Project DA Bubble",
+      "text": "Sven is a trustworthy teamplayer and can cope with the stress of deadlines. Structured work and clear code."
+    },
+    "ref3": {
+      "name": "Noah Müller",
+      "project": "Project Pollo Loco",
+      "text": "Sven had to develop, format and deliver content in collaboration with the team members. He is a reliable and friendly person."
+    }
+  },
     "contact": {
+        "title": "contact",
         "problem": "Got a problem to solve?",
         "intro": "Do you have exciting projects and need support? ",
         "cta": "I look forward to hearing from you!",

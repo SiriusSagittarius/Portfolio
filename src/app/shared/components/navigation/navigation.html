@@ -5,9 +5,9 @@
         <a href="/"><img [src]="mobileNavImage" alt="Mobile Navigation Image"></a>
       </div>
       <div class="nav-menu">
-        <a class="nav-menu-link" href="#aboutme">About me</a>
-        <a class="nav-menu-link" href="#skills">Skill Set</a>
-        <a class="nav-menu-link" href="#work">My Work</a>
+        <a class="nav-menu-link" href="#aboutme">{{ "navigation.aboutme" | translate }}</a>
+        <a class="nav-menu-link" href="#skills">{{"navigation.skillset" | translate}}</a>
+        <a class="nav-menu-link" href="#work">{{"navigation.mywork" | translate}}</a>
         <div class="nav-language-switch">
           <a (click)="changeLanguage('de')" [class.navLangActive]="isDeActive">DE</a>
           <span class="nav-language-switch-desk">|</span>

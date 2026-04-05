@@ -14,6 +14,8 @@
     font-weight: 400;
     font-size: 45px;
     margin-bottom: 8px;
+    line-height: 1.2;
+    color: #ffffff !important
   }
 
   .sub-title {
@@ -34,6 +36,7 @@
       min-width: 280px;
 
       .name {
+        text-align: left;
         font-family: 'Montserrat', sans-serif;
         font-weight: 700; // Bold Stärke 700
         font-size: 24px;

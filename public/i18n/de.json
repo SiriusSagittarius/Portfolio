@@ -13,16 +13,16 @@
     "epl": "Jump and Run Spiel basierend auf einem Objektorientierten Ansatz. Einsammeln von Münzen, werfen von Objekten und ein spezieller Endboss-Kampf!"
   },
   "references": {
-    "title": "Need a teamplayer?",
-    "description": "Here is what my colleagues say about me.",
+    "title": "Sie brauchen einen Teamplayer?",
+    "description": "Das sagen meine Kollegen über mich.",
     "ref1": {
-      "name": "James Rugman",
-      "project": "Project Join",
+      "name": "Roman Unruh",
+      "project": "Project Pokedex",
       "text": "Sven ist eine zuverlässige und freundliche Person. Er arbeitet strukturiert und schreibt sauberen Code. Ich kann ihn als Kollegen nur wärmstens empfehlen."
     },
     "ref2": {
-      "name": "Evelyn Marx",
-      "project": "Project DA Bubble",
+      "name": "Ulrike Paulusch",
+      "project": "Project Join",
       "text": "Sven ist ein vertrauenswürdiger Teamplayer und kommt gut mit dem Stress von Deadlines zurecht. Strukturierte Arbeitsweise und klarer Code."
     },
     "ref3": {

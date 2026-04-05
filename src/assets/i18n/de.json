@@ -5,14 +5,50 @@
     "title": "Fullstack Developer"
   },
   "intro": {
+    "title": "Zusammen arbeiten!",
     "letswork": "Ich bin ein Software-Entwickler, der in Much lebt. Seit bereits mehreren Jahren macht es mir großen Spaß, die Ideen von Designern und Firmen zu verwirklichen und ihre Projekte zu begleiten. Ursprünglich bin ich in CSS und JavaScript zu Hause, suche aber aktuell vor allem Herausforderungen im Bereich Angular und React! Bitte kontaktieren Sie mich, falls das für Sie gut passen könnte und wir sprechen darüber."
   },
+  "navigation": {
+    "aboutme": "Über mich",
+    "skillset": "Fähigkeiten",
+    "mywork": "Projekte"
+  
+  
+  },
+  
+  
+  
+  
+  
+  
+  
   "myWork": {
+    "title": "Meine Arbeit",
     "intro": "Folgend finden Sie eine Übersicht meiner Arbeit.",
     "pokedex": "Digitales Pokedex-Register: Entwicklung einer datengetriebenen Anwendung basierend auf einem objektorientierten Ansatz. Ein Projekt, das moderne Web-Technologien mit der Logik eines digitalen Lexikons verbindet!",
     "epl": "Jump and Run Spiel basierend auf einem Objektorientierten Ansatz. Einsammeln von Münzen, werfen von Objekten und ein spezieller Endboss-Kampf!"
   },
+  "references": {
+    "title": "Sie brauchen einen Teamplayer?",
+    "description": "Das sagen meine Kollegen über mich.",
+    "ref1": {
+      "name": "Roman Unruh",
+      "project": "Project Pokedex",
+      "text": "Sven ist eine zuverlässige und freundliche Person. Er arbeitet strukturiert und schreibt sauberen Code. Ich kann ihn als Kollegen nur wärmstens empfehlen."
+    },
+    "ref2": {
+      "name": "Ulrike Paulusch",
+      "project": "Project Join",
+      "text": "Sven ist ein vertrauenswürdiger Teamplayer und kommt gut mit dem Stress von Deadlines zurecht. Strukturierte Arbeitsweise und klarer Code."
+    },
+    "ref3": {
+      "name": "Noah Müller",
+      "project": "Project Pollo Loco",
+      "text": "Sven hat in Zusammenarbeit mit den Teammitgliedern Inhalte entwickelt, formatiert und bereitgestellt. Er ist eine zuverlässige und freundliche Person."
+    }
+  },
   "contact": {
+    "title": "Kontakt",
     "problem": "Stehen Sie vor einer Herausforderung oder haben eine Idee für ein Projekt?",
     "intro": "Sie haben spannende Projekte und brauchen Unterstützung?",
     "cta": "Ich freue mich wenn Sie",
