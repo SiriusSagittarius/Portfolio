@@ -1,0 +1,59 @@
+@use '../../../shared/style/colors.scss' as *;
+@use '../../../shared/style/fonts.scss' as *;
+.skillset {
+  background-image: linear-gradient(to right, $primary-color, $secondary-color);
+  padding: 180px 18px;
+
+  &-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 60px 0;
+  }
+
+  &-div {
+    width: 20%;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+    img {
+      transition: transform 0.1s ease;
+      &:hover {
+        transform: translateY(-10px);
+        animation: bounce 0.5s infinite alternate;
+      }
+    }
+
+    &:hover {
+      font-weight: 800;
+    }
+  }
+
+  p {
+    color: $white;
+    font-size: 16px;
+  }
+
+  @media (max-width: 1050px) {
+    &-div {
+      width: 30%;
+    }
+  }
+
+  @media (max-width: 800px) {
+    &-div {
+      width: 50%;
+    }
+  }
+  @media (max-width: 720px) {
+    padding: 100px 18px;
+  }
+
+  @keyframes bounce {
+    to {
+      transform: translateY(-20px);
+    }
+  }
+}

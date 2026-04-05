@@ -1,0 +1,11 @@
+<section data-aos="fade-up" class="skillset">
+  <div class="main">
+    <h3>Skill set</h3>
+    <div class="skillset-row">
+      <div class="skillset-div" *ngFor="let skill of skillIcons">
+        <img [src]="getSkillIconPath(skill.icon)" alt="{{ skill.name }}" />
+        <p>{{ skill.name }}</p>
+      </div>
+    </div>
+  </div>
+</section>

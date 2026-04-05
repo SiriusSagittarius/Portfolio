@@ -1,0 +1,107 @@
+@use '../../shared/style/colors.scss' as *;
+@use '../../shared/style/fonts.scss' as *;
+
+.footer {
+  width: 100%;
+  height: 250px; // Höhe leicht angepasst für bessere Proportionen
+  background: radial-gradient(
+    71.18% 335.57% at 28.82% -124.4%,
+    $primary-color 6.25%,
+    $primary-color 51.56%,
+    #0043f0 100%
+  );
+  display: flex;
+  align-items: center; // Zentriert den .main Container vertikal im Footer
+  justify-content: center;
+}
+
+.main {
+  width: 100%;
+  max-width: 1440px; // Verhindert, dass es auf riesigen Bildschirmen zu weit auseinander zieht
+  padding: 0 40px; // Sorgt für Abstand an den Seiten
+}
+
+.row-footer {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr; // Der Trick für perfekte Zentrierung der Mitte
+  align-items: center;
+  width: 100%;
+}
+
+.footer-logo {
+  justify-self: start; // Drückt das Logo ganz nach links
+
+  img {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+.footer-content {
+  justify-self: center; // Hält den Text exakt in der Mitte
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  color: $white;
+
+  &-name {
+    text-align: center;
+    font-size: 23px;
+    font-family: $primary-font;
+    font-weight: 400;
+  }
+
+  &-imprint a {
+    color: $white;
+    text-decoration: none;
+    transition: font-weight 0.3s ease;
+    cursor: pointer;
+    font-size: 16px;
+    
+    &:hover {
+      font-weight: 700;
+    }
+  }
+}
+
+.footer-content-social {
+  justify-self: end; // Drückt die Icons ganz nach rechts
+  display: flex;
+  gap: 25px; // Einheitlicher Abstand zwischen den Icons
+  align-items: center;
+
+  a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  img {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.3s ease;
+
+    &:hover {
+      transform: scale(1.2);
+    }
+  }
+}
+
+// Responsive Anpassung für kleinere Bildschirme
+@media (max-width: 1025px) {
+  .footer {
+    height: auto; // Erlaubt dem Footer zu wachsen
+    padding: 60px 0;
+  }
+
+  .row-footer {
+    grid-template-columns: 1fr; // Stapelt Logo, Text und Icons übereinander
+    gap: 60px; // Abstand zwischen den gestapelten Elementen
+  }
+
+  .footer-logo,
+  .footer-content-social {
+    justify-self: center; // Zentriert Logo und Icons in der mobilen Ansicht
+  }
+}

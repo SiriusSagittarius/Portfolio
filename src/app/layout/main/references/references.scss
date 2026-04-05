@@ -1,0 +1,80 @@
+.references-section {
+  background: linear-gradient(90deg, #4b8efc 0%, #3d7eeb 100%);
+  color: #ffffff;
+  padding: 100px 20px;
+  text-align: center;
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .main-title {
+    font-family: 'Baloo 2', 'Baloo', cursive; // Baloo für die Hauptüberschrift
+    font-weight: 400;
+    font-size: 45px;
+    margin-bottom: 8px;
+  }
+
+  .sub-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 32px;
+    font-weight: 400;
+    margin-bottom: 80px;
+  }
+
+  .reference-cards {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    text-align: left;
+
+    .card {
+      flex: 1;
+      min-width: 280px;
+
+      .name {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 700; // Bold Stärke 700
+        font-size: 24px;
+        margin-bottom: 4px;
+      }
+
+      .project {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 16px;
+        display: block;
+        margin-bottom: 24px;
+        opacity: 0.8;
+      }
+
+      .quote {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 400; // Regular
+        font-size: 18px;
+        line-height: 1.5;
+      }
+    }
+  }
+}
+
+// Responsive Anpassung für Mobile
+@media (max-width: 900px) {
+  .reference-cards {
+    flex-direction: column;
+    align-items: center;
+    
+    .card {
+      text-align: center;
+      max-width: 500px;
+    }
+  }
+
+  .main-title {
+    font-size: 36px;
+  }
+
+  .sub-title {
+    font-size: 24px;
+  }
+}

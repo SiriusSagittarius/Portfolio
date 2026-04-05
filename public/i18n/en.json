@@ -1,0 +1,118 @@
+{   
+    "buttontxt": "Send a message",
+    "header": {
+        "hello": "Hello I'm Sven",
+        "title": "Fullstack Developer"
+    },
+    "intro": {
+        "letswork": "I am a front-end developer living south of Much. For several years now, I have enjoyed realizing the ideas of designers and companies and accompanying their projects. Originally, I am at home in CSS and JavaScript, but currently I am mainly looking for challenges in Angular and React! Please contact me if this could be a good fit for you and we can talk about it."
+    },
+    "myWork": {
+        "intro": "Below you will find an overview of my work.",
+        "join": "Task management system based on the Kanban model. Creation and organization of tasks including drag and drop function as well as ticket assignment and category structure",
+        "epl": "Jump and run game based on an object-oriented approach. Collecting coins, throwing objects and a special final boss fight!",
+        "crm": "Simple customer relationship management system with CRUD function"
+    },
+    "references": {
+    "title": "Need a teamplayer?",
+    "description": "Here is what my colleagues say about me.",
+    "ref1": {
+      "name": "James Rugman",
+      "project": "Project Join",
+      "text": "Sven is a reliable and friendly person. Work in a structured way and write a clear code. I highly recommend him as a colleague."
+    },
+    "ref2": {
+      "name": "Evelyn Marx",
+      "project": "Project DA Bubble",
+      "text": "Sven is a trustworthy teamplayer and can cope with the stress of deadlines. Structured work and clear code."
+    },
+    "ref3": {
+      "name": "Noah Müller",
+      "project": "Project Pollo Loco",
+      "text": "Sven had to develop, format and deliver content in collaboration with the team members. He is a reliable and friendly person."
+    }
+  },
+    "contact": {
+        "problem": "Got a problem to solve?",
+        "intro": "Do you have exciting projects and need support? ",
+        "cta": "I look forward to hearing from you!",
+        "contactme": " Contact me!",
+        "labelName": "Your Name",
+        "labelNameRequired": "Your name is required",
+        "labelEmail": "Your Mail",
+        "labelMailRequired": "Please enter a valid email address",
+        "labelMessage": "Your Message",
+        "labelMessageRequired": "Your message is too short",
+        "labelCheckbefore": "I've read the ",
+        "labelCheckLink": "privacy policy",
+        "labelCheckAfter": " and agree to the processing of my data as outlined."
+    },
+    "imprint": {
+        "contact":"Contact",
+        "h1": "Privacy Policy",
+        "datenschutzView": "1. Data Protection at a Glance",
+        "h3-allgHinweise": "General Information",
+        "p-allgHinweise": "The following information provides a simple overview of what happens to your personal data when you visit this website. Personal data is any data with which you could be personally identified. Detailed information on data protection can be found in our privacy policy listed below this text.",
+        "h3-datenerfassung": "Data Collection on This Website",
+        "h4-werIstVerantwortlich": "Who is responsible for data collection on this website?",
+        "p-werIstVerantwortlich": "The data processing on this website is carried out by the website operator. You can find their contact details in the 'Responsible Party' section of this privacy policy.",
+        "h3-wieErfassenDaten": "How do we collect your data?",
+        "p-wieErfassenDaten": "Your data is collected in part by you providing it to us. This may include data that you enter into a contact form. Other data is automatically collected or with your consent when you visit the website by our IT systems. These are mainly technical data (e.g., internet browser, operating system, or time of page visit). This data is collected automatically as soon as you enter this website.",
+        "h4-datennutzung": "How do we use your data?",
+        "p-datennutzung": "Some of the data is collected to ensure the proper functioning of the website. Other data can be used to analyze your user behavior.",
+        "h4-rechteDaten": "Your Rights Regarding Your Data",
+        "p-rechteDaten": "You have the right to obtain free information about the origin, recipient, and purpose of your stored personal data at any time. You also have the right to request the correction or deletion of this data. If you have given your consent to data processing, you can revoke this consent at any time for the future. You also have the right, under certain circumstances, to demand the restriction of the processing of your personal data. Furthermore, you have a right to lodge a complaint with the competent supervisory authority. For this and other questions regarding data protection, you can contact us at any time.",
+        "h4-hosting": "2. Hosting",
+        "p-hosting": "We host the content of our website with the following provider:",
+        "h4-ionos": "IONOS",
+        "p-ionos": "The provider is IONOS SE, Elgendorfer Str. 57, 56410 Montabaur (hereinafter referred to as IONOS). When you visit our website, IONOS collects various log files including your IP addresses. Details can be found in IONOS's privacy policy:",
+        "a-ionos": "https://www.ionos.de/terms-gtc/terms-privacy.",
+        "p-ionos-second": "The use of IONOS is based on Art. 6 para. 1 lit. f DSGVO. We have a legitimate interest in a reliable presentation of our website. If consent has been requested, processing will be carried out exclusively on the basis of Art. 6 para. 1 lit. a DSGVO and § 25 para. 1 TTDSG, provided that the consent includes the storage of cookies or access to information on the user's device (e.g., device fingerprinting) within the meaning of the TTDSG. The consent can be revoked at any time.",
+        "h4-allgHinweisePflichtinfo": "3. General Notes and Mandatory Information",
+        "h4-datenschutz": "Data Protection",
+        "p-datenschutz": "The operators of these pages take the protection of your personal data very seriously. We treat your",
+        "h4-hinweisVerantwortlich":"Responsible Party Notice",
+        "p-hinweisVerantwortlich":"The responsible party for data processing on this website is:",
+        "p-hinweisVerantwortlichName":"Sven Haase",
+        "p-hinweisVerantwortlichStr":"Hauptstr 28",
+        "p-hinweisVerantwortlichPlz":"53804 Much",
+        "p-hinweisVerantwortlichMail":"svenhaaseausmuch@gmail.com",
+        "p-hinweisVerantwortlichtxt":"The responsible party is the natural or legal person who alone or jointly with others decides on the purposes and means of processing personal data (e.g., names, e-mail addresses, etc.).",
+        "h4-speicherdauer": "Storage Duration",
+        "p-speicherdauer": "Unless a specific storage period has been specified within this privacy policy, your personal data will remain with us until the purpose for data processing ceases to apply. If you assert a legitimate request for deletion or revoke consent to data processing, your data will be deleted unless we have other legally permissible reasons for storing your personal data (e.g., tax or commercial retention periods); in the latter case, the deletion will take place after these reasons cease to apply.",
+        "h4-allgHinweiseRechtsgrundlage": "General Notes on Legal Bases for Data Processing on This Website",
+        "p-allgHinweiseRechtsgrundlage": "If you have given your consent to data processing, we process your personal data on the basis of Art. 6 para. 1 lit. a DSGVO or Art. 9 para. 2 lit. a DSGVO, if special categories of data according to Art. 9 para. 1 DSGVO are processed. In the event of express consent to the transfer of personal data to third countries, data processing is also based on Art. 49 para. 1 lit. a DSGVO. If you have consented to the storage of cookies or access to information on your device (e.g., via device fingerprinting), data processing is additionally based on § 25 para. 1 TTDSG. The consent can be revoked at any time. If your data is necessary for the performance of a contract or for the implementation of pre-contractual measures, we process your data on the basis of Art. 6 para. 1 lit. b DSGVO. Furthermore, we process your data if it is necessary to fulfill a legal obligation based on Art. 6 para. 1 lit. c DSGVO. Data processing may also be based on our legitimate interests pursuant to Art. 6 para. 1 lit. f DSGVO. The relevant legal bases for data processing in each individual case are provided in the following paragraphs of this privacy policy.",
+        "h4-PersonenbezogenenDaten": "Recipients of Personal Data",
+        "p-PersonenbezogenenDaten": "In the course of our business activities, we cooperate with various external entities. It is sometimes necessary to transfer personal data to these external entities. We only pass on personal data to external entities if it is necessary for the fulfillment of a contract, if we are legally obligated to do so (e.g., disclosure of data to tax authorities), if we have a legitimate interest pursuant to Art. 6 para. 1 lit. f DSGVO in the disclosure, or if another legal basis permits the data transfer. When using data processors, we only transfer personal data of our customers based on a valid data processing agreement. In the case of joint processing, a joint processing agreement is concluded.",
+        "h4-widerrufen": "Revocation of Your Consent to Data Processing",
+        "p-widerrufen": "Many data processing operations are only possible with your express consent. You can revoke consent that has already been given at any time. The legality of the data processing carried out before the revocation remains unaffected by the revocation.",
+        "h4-widerspruchsrecht": "Right to Object to Data Collection in Special Cases and to Direct Marketing (Art. 21 DSGVO)",
+        "p-widerspruchsrecht": "IF DATA PROCESSING IS BASED ON ART. 6 PARA. 1 LIT. E OR F DSGVO, YOU HAVE THE RIGHT TO OBJECT, ON GROUNDS RELATING TO YOUR PARTICULAR SITUATION, AT ANY TIME TO THE PROCESSING OF YOUR PERSONAL DATA; THIS ALSO APPLIES TO PROFILING BASED ON THESE PROVISIONS. THE RESPECTIVE LEGAL BASIS ON WHICH PROCESSING IS BASED CAN BE FOUND IN THIS PRIVACY POLICY. IF YOU OBJECT, WE WILL NO LONGER PROCESS YOUR AFFECTED PERSONAL DATA UNLESS WE CAN DEMONSTRATE COMPELLING LEGITIMATE GROUNDS FOR THE PROCESSING WHICH OVERRIDE YOUR INTERESTS, RIGHTS, AND FREEDOMS OR FOR THE ESTABLISHMENT, EXERCISE, OR DEFENSE OF LEGAL CLAIMS (OBJECTION PURSUANT TO ART. 21 PARA. 1 DSGVO). IF YOUR PERSONAL DATA IS PROCESSED FOR DIRECT MARKETING PURPOSES, YOU HAVE THE RIGHT TO OBJECT AT ANY TIME TO THE PROCESSING OF YOUR PERSONAL DATA FOR THE PURPOSE OF SUCH ADVERTISING; THIS ALSO APPLIES TO PROFILING INsofar AS IT IS RELATED TO SUCH DIRECT MARKETING. IF YOU OBJECT, YOUR PERSONAL DATA WILL SUBSEQUENTLY NO LONGER BE USED FOR DIRECT MARKETING PURPOSES (OBJECTION PURSUANT TO ART. 21 PARA. 2 DSGVO).",
+        "h4-Beschwerderecht": "Right to Lodge a Complaint with the Supervisory Authority",
+        "p-Beschwerderecht": "In the event of violations of the GDPR, data subjects have the right to lodge a complaint with a supervisory authority, in particular in the Member State of their habitual residence, place of work, or place of the alleged infringement. The right to lodge a complaint is without prejudice to any other administrative or judicial remedy.",
+        "h4-RechtDatenübertragbarkeit": "Right to Data Portability",
+        "p-RechtDatenübertragbarkeit": "You have the right to have data which we process automatically based on your consent or in fulfillment of a contract handed over to you or to a third party in a standard, machine-readable format. If you request the direct transfer of the data to another responsible party, this will only be done to the extent technically feasible.",
+        "h4-auskunft": "Information, Correction, and Deletion",
+        "p-auskunft": "Within the framework of the applicable legal provisions, you have the right to free information about your stored personal data, its origin and recipient and the purpose of data processing at any time and, if applicable, a right to correction or deletion of this data. For this purpose and for further questions regarding personal data, you can contact us at any time.",
+        "h4-rechtVerarbeitung": "Right to Restrict Processing",
+        "p-rechtVerarbeitung": "You have the right to request the restriction of the processing of your personal data. You can contact us at any time for this purpose. The right to restrict processing exists in the following cases:",
+        "list-rechtVerarbeitung-1": "If you dispute the accuracy of your personal data stored with us, we usually need time to verify this. For the duration of the review, you have the right to request the restriction of the processing of your personal data.",
+        "list-rechtVerarbeitung-2": "If the processing of your personal data was/is unlawful, you can request the restriction of data processing instead of deletion.",
+        "list-rechtVerarbeitung-3": "If we no longer need your personal data, but you need it for the exercise, defense, or assertion of legal claims, you have the right to request the restriction of the processing of your personal data instead of deletion.",
+        "list-rechtVerarbeitung-4": "If you have filed an objection pursuant to Art. 21 para. 1 DSGVO, a balance must be struck between your interests and ours. As long as it has not yet been determined whose interests outweigh the other, you have the right to request the restriction of the processing of your personal data.",
+        "p-rechtVerarbeitung-txt": "If you have restricted the processing of your personal data, these data – apart from their storage – may only be processed with your consent or for the establishment, exercise, or defense of legal claims or for the protection of the rights of another natural or legal person or for reasons of important public interest of the European Union or a Member State.",
+        "h3-plugins": "4. Plugins and Tools",
+        "h4-googlefonts": "Google Fonts",
+        "p-googlefonts-1": "This page uses so-called Google Fonts for the uniform display of fonts, which are provided by Google. When you call up a page, your browser loads the required fonts into your browser cache to display texts and fonts correctly.",
+        "p-googlefonts-2": "For this purpose, the browser you use must connect to Google's servers. As a result, Google learns that our website has been accessed via your IP address. The use of Google Fonts is based on Art. 6 para. 1 lit. f DSGVO. The website operator has a legitimate interest in the uniform presentation of the typeface on his website. If consent has been requested, processing will be carried out exclusively on the basis of Art. 6 para. 1 lit. a DSGVO and § 25 para. 1 TTDSG, provided that the consent includes the storage of cookies or access to information on the user's device (e.g., device fingerprinting) within the meaning of the TTDSG. The consent can be revoked at any time.",
+        "p-googlefonts-3": "If your browser does not support Google Fonts, a standard font will be used by your computer.",
+        "p-googlefonts-4": "For more information on Google Fonts, please visit",
+        "p-googlefonts-5": "https://developers.google.com/fonts/faq",
+        "p-googlefonts-6": "and Google's Privacy Policy:",
+        "p-googlefonts-7": "https://policies.google.com/privacy?hl=en.",
+        "p-googlefonts-8": "The company is certified under the EU-US Data Privacy Framework (DPF). The DPF is an agreement between the European Union and the United States that aims to ensure compliance with European data protection standards for data processing in the United States. Each company certified under the DPF undertakes to comply with these data protection standards. Further information can be obtained from the provider at the following link:",
+        "p-googlefonts-9": "https://www.dataprivacyframework.gov/s/participant-search/participant-detail?contact=true&id=a2zt000000001L5AAI&status=Active",
+        "Source:": "https://www.e-recht24.de"
+        }
+    }
+   

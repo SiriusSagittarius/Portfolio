@@ -1,0 +1,35 @@
+@use '../../style/colors.scss' as *;
+
+.row-imprint {
+  hyphens: auto;
+  word-wrap: break-word;
+  padding: 180px 18px;
+  position: relative;
+  h3 {
+    color: $primary-color;
+    text-align: left;
+    font-size: 45px;
+  }
+  h1,
+  h2 {
+    font-size: 45px;
+  }
+  li {
+    font-size: 23px;
+    line-height: 1.8;
+  }
+}
+
+@media (max-width: 800px) {
+  .row-imprint {
+    h3 {
+      color: $primary-color;
+      text-align: left;
+      font-size: 30px;
+    }
+    h1,
+    h2 {
+      font-size: 30px;
+    }
+  }
+}

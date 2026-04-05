@@ -1,1 +1,29 @@
-/* You can add global styles to this file, and also import other style files */
+@use './app/shared/style/base.scss' as *;
+@use './app/shared/style/fonts.scss' as *;
+@use './app/shared/style/mixins.scss' as *;
+@use './app/shared/style/colors.scss' as *;
+@use 'aos/dist/aos.css';
+
+body {
+  margin: 0;
+  // padding-bottom: 289px; // Entfernt, da der Footer nicht mehr fixiert ist
+}
+.circle {
+  @include circle(100px, $primary-color, $secondary-color);
+}
+
+h1 {
+  font-family: $secondary-font;
+  font-weight: 400;
+  color: $primary-color;
+  margin: 0;
+}
+
+h2 {
+  text-transform: uppercase;
+  font-family: $secondary-font;
+  color: $primary-color;
+  font-weight: 900;
+  line-height: 1;
+  margin: 0;
+}

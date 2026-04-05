@@ -1,0 +1,37 @@
+<section [ngClass]="{'nav-imprint-page': isImprintPage}" [class.scrolled]="isScrolled" class="row-nav">
+  <div class="main">
+    <div  class="nav">
+      <div class="nav-logo">
+        <a href="/"><img [src]="mobileNavImage" alt="Mobile Navigation Image"></a>
+      </div>
+      <div class="nav-menu">
+        <a class="nav-menu-link" href="#aboutme">About me</a>
+        <a class="nav-menu-link" href="#skills">Skill Set</a>
+        <a class="nav-menu-link" href="#work">My Work</a>
+        <div class="nav-language-switch">
+          <a (click)="changeLanguage('de')" [class.navLangActive]="isDeActive">DE</a>
+          <span class="nav-language-switch-desk">|</span>
+          <a (click)="changeLanguage('en')" [class.navLangActive]="isEnActive">EN</a>
+        </div> 
+        <div class="nav-mobile" (click)="toggle()" [class.open]="isChecked">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div data-aos="fade-left" class="nav-overlay" *ngIf="showOverlay" (click)="closeMenu()" [class.active]="showOverlay">
+  <div class="nav-menu-content">
+    <a href="#aboutme">About me</a>
+    <a href="#skills">Skill Set</a>
+    <a href="#work">My Work</a>
+    <div class="nav-language-switch">
+      <a (click)="changeLanguage('de')" [class.navLangActive]="isDeActive">DE</a>
+      <span class="nav-language-switch-mobile">|</span>
+      <a (click)="changeLanguage('en')" [class.navLangActive]="isEnActive">EN</a>
+    </div> 
+  </div>
+</div>

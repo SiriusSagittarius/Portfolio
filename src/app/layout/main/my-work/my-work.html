@@ -1,0 +1,67 @@
+<section id="work" class="my-work">
+  <div class="main">
+    <div class="row-my-work-intro">
+      <div class="col-6">
+        <div class="my-work-circle-little"></div>
+        <h2>My work</h2>
+        <p>
+          {{ "myWork.intro" | translate }}
+        </p>
+      </div>
+      <div class="col-6">
+        <div class="my-work-circle-big"></div>
+      </div>
+    </div>
+
+    <div class="my-work-div-circle-1"></div>
+    <div class="my-work-div-circle-2"></div>
+    <div class="my-work-div-circle-3"></div>
+    <div class="my-work-div-circle-4"></div>
+
+    <div
+      class="my-work-div my-work-div-default"
+      [ngClass]="{ 'my-work-div-reverse': odd }"
+      *ngFor="let project of projects; let odd = odd"
+    >
+      <div data-aos="fade-left" class="col-6">
+        <a [href]="project.safeLiveTest" target="_blank">
+          <img
+            src="assets/img/pc_mockup/{{ project.mockup }}"
+            alt="{{ project.name }}"
+          />
+        </a>
+      </div>
+
+      <div data-aos="fade-right" class="col-6">
+        <div class="my-work-title">
+          <h4>{{ project.name | translate }}</h4>
+        </div>
+        <div class="my-work-language">
+          <h5>{{ project.projectLanguage | translate }}</h5>
+        </div>
+
+        <div class="my-work-div-content">
+          {{ project.translatedDescription }}
+        </div>
+
+        <div class="my-work-div-btn-row">
+          <a
+            class="button my-work-div-content-mobile-btn"
+            target="_blank"
+            [href]="project.safeLiveTest"
+          >
+            Live test
+          </a>
+          <a
+            class="button"
+            target="_blank"
+            [href]="'https://github.com/SiriusSagittarius/' + project.link"
+          >
+            Github
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <span id="contact"></span>
+</section>

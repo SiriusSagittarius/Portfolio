@@ -1,0 +1,172 @@
+@use './colors.scss' as *;
+@use './fonts.scss' as *;
+
+$max-width-page: 1400px;
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: $primary-font;
+  background-color: $white;
+}
+app-navigation {
+  width: 100%;
+  position: fixed;
+  z-index: 6;
+}
+h1 {
+  font-family: $secondary-font;
+}
+.main {
+  max-width: $max-width-page;
+  margin: auto;
+  position: relative;
+}
+
+p {
+  font-size: 23px;
+  line-height: 1.8;
+}
+
+.col-12 {
+  width: 100%;
+}
+
+.col-6 {
+  width: 45%;
+}
+
+.col-3 {
+  width: 25%;
+}
+
+.row,
+.header-row {
+  width: 100%;
+  display: flex;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+* {
+  scrollbar-width: auto;
+}
+
+*::-webkit-scrollbar {
+  width: 4px;
+}
+
+*::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+}
+
+@media screen and (max-width: 1199px) {
+  .col-6 {
+    width: 100%;
+  }
+}
+a {
+  font-family: $primary-font;
+  color: #5988FF;
+  text-decoration: none;
+  &:hover {
+    font-weight: 700;
+  }
+}
+.button,
+.validbtn,
+.btn-primary {
+  padding: 15px 30px;
+  color: $primary-color;
+  font-family: $primary-font;
+  display: inline-block;
+  border: 2px solid $primary-color;
+  position: relative;
+  text-decoration: none;
+  border-radius: 10px;
+  font-size: 20px;
+  background-color: transparent;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.2s;
+  transform-origin: left top;
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -20%;
+    width: 0;
+    height: 100%;
+    background-image: linear-gradient(to right, $primary-color, $secondary-color);
+    transition:
+      width 0.3s,
+      transform 0.3s; // Separate transition for ::before
+    z-index: -1;
+  }
+
+  &:hover::before {
+    width: 170%;
+    color: $white;
+    left: -40%;
+    transform: skewX(-30deg);
+  }
+
+  &:hover {
+    color: $white;
+    transform: scale(1.1);
+  }
+
+  &:disabled {
+    color: $primary-color;
+    cursor: not-allowed;
+    pointer-events: none;
+
+    transition: none;
+
+    &:hover {
+      transform: none;
+      color: $primary-color;
+    }
+
+    &:before {
+      width: 0;
+      transition:
+        width 0.3s,
+        transform 0.3s;
+    }
+  }
+
+  &:not(:disabled) {
+    transition:
+      transform 0.2s,
+      color 0.2s;
+  }
+
+  &:not(:disabled):hover {
+    color: $white;
+    transform: scale(1.1);
+  }
+}
+
+@media (max-width: 720px) {
+  .button:hover::before {
+    width: auto;
+    left: 0;
+    transform: skewX(0deg);
+  }
+
+  .button:hover {
+    color: $primary-color;
+    transform: scale(1);
+  }
+}
+
+@media (max-width: 450px) {
+  button,
+  .button {
+    padding: 15px 18px 15px 18px;
+  }
+}
