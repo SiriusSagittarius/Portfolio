@@ -20,10 +20,8 @@ export class App implements OnInit {
   title = 'Sven Haase';
 
   constructor() {
-    // Setzt die Standardsprache, falls keine andere gefunden wird
-    this.translate.setDefaultLang('de');
-    // Nutzt die aktuell gewählte Sprache (z.B. aus dem Browser oder Speicher)
-    this.translate.use('de');
+    this.translate.addLangs(['en', 'de']);
+    this.translate.use('en');
   }
 
   ngOnInit() {

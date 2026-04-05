@@ -9,9 +9,9 @@ export const appConfig: ApplicationConfig = {
   providers: [
     provideRouter(routes),
     provideHttpClient(),
-    // Konfiguriere hier den generellen Translate-Service (z.B. Fallback-Sprache)
+    
     provideTranslateService({
-      fallbackLang: 'de',
+      fallbackLang: 'en',
     }),
     // Diese Funktion ersetzt die alte Factory und stellt den HttpLoader sowie Config-Tokens bereit
     provideTranslateHttpLoader(),
