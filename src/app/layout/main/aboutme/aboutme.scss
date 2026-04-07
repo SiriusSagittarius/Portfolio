@@ -1,0 +1,168 @@
+@use '../../../shared/style/colors.scss' as *;
+@use '../../../shared/style/fonts.scss' as *;
+@use '../../../shared/style/mixins.scss' as *;
+@use '../../../shared/style/base.scss' as *;
+
+.intro {
+  padding: 120px 18px;
+  position: relative;
+  overflow: hidden;
+
+  &-circle-little {
+    @include circle(100px, $primary-color, $secondary-color);
+    position: absolute;
+    top: -95px;
+    right: 300px;
+  }
+}
+
+.row-intro {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px; /* Abstand zwischen linkem und rechtem Container */
+  margin-left: 100px; /* Schiebt alles 100px nach rechts */
+}
+
+.col-left {
+  width: 606px;
+  height: 406px;
+  flex: none; /* Verhindert, dass Flexbox die Größe automatisch ändert */
+}
+
+h1 {
+  font-family: $secondary-font;
+  font-size: 120px;
+  color: #5988ff;
+  line-height: 0.9;
+  margin: 0px 0px 20px 25px; /* Linken Abstand entfernt, damit mehr Platz ist */
+  font-weight: 400;
+  min-width: 800px; /* Verhindert den 3-Zeiler, indem der Text-Box mehr Breite erlaubt wird */
+}
+
+.col-right {
+  width: 571px;
+  height: 406px;
+  flex: none;
+}
+
+.iam-text {
+  text-align: center;
+  font-family: 'Baloo', cursive;
+  font-weight: 700;
+  font-size: 45px;
+  color: #5988ff;
+  margin: 10px 25px 10px 50px;
+}
+
+.icon-container {
+  display: flex;
+  gap: 90px;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 60px 10px 10px 20px;
+
+  /* Hover-Bilder vorladen (Preload), um Aufblitzen zu verhindern */
+  &::after {
+    position: absolute;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    z-index: -1;
+    content: '';
+    background-image:
+      url('/img/icons/intro/locb.svg'), url('/img/icons/intro/remoteb.svg'),
+      url('/img/icons/intro/relocb.svg');
+  }
+}
+
+.icon-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #5988ff;
+  font-size: 14px;
+
+  span {
+    white-space: pre-line; /* Erlaubt echte Zeilenumbrüche durch \n aus der de.json */
+  }
+
+  img {
+    width: 50px;
+    height: 50px; /* Feste Höhe erzwingen, damit das Layout nicht mehr springt */
+    object-fit: contain; /* Bild sauber in die 40x40 Box einpassen */
+  }
+
+  cursor: pointer; /* Macht den Mauszeiger zur Hand */
+
+  /* Bild für das erste Icon (Location) austauschen */
+  &:nth-child(1):hover img {
+    content: url('/img/icons/intro/locb.svg');
+  }
+  /* Bild für das zweite Icon (Remote) austauschen */
+  &:nth-child(2):hover img {
+    content: url('/img/icons/intro/remoteb.svg');
+  }
+  /* Bild für das dritte Icon (Relocate) austauschen */
+  &:nth-child(3):hover img {
+    content: url('/img/icons/intro/relocb.svg');
+  }
+}
+
+.intro-description {
+  p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #4b4b4b;
+    margin-bottom: 40px;
+    white-space: pre-line;
+  }
+}
+
+.btn-primary-outline {
+  display: inline-block;
+  padding: 12px 32px;
+  border: 2px solid #5988ff;
+  border-radius: 8px;
+  color: #5988ff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background-color: #5988ff;
+    color: white;
+  }
+}
+
+@media (max-width: 1199px) {
+  .row-intro {
+    flex-direction: column;
+    gap: 40px;
+    margin-left: 0; /* Reset des linken Abstands für Tablet/Mobile */
+  }
+
+  .col-left,
+  .col-right {
+    width: 100%; /* Verhindert, dass die Boxen auf kleinen Bildschirmen zu breit sind */
+    height: auto;
+  }
+
+  .col-left h2 {
+    font-size: 60px;
+  }
+
+  .intro-circle-large {
+    left: 80%;
+  }
+}
+
+@media (max-width: 768px) {
+  .intro {
+    padding: 60px 18px;
+  }
+
+  .icon-container {
+    gap: 15px;
+  }
+}

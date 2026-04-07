@@ -8,11 +8,17 @@
     max-width: 1200px;
     margin: 0 auto;
   }
-
-  .main-title {
-    font-family: 'Baloo 2', 'Baloo', cursive; // Baloo für die Hauptüberschrift
+  h1{
+    font-family: 'Baloo', cursive;
     font-weight: 400;
-    font-size: 45px;
+    font-size: 120px;
+    margin-bottom: 8px;
+    line-height: 1.2;
+  }
+  .main-title {
+    font-family: 'Baloo', cursive; 
+    font-weight: 400;
+    font-size: 90px;
     margin-bottom: 8px;
     line-height: 1.2;
     color: #ffffff !important

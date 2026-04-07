@@ -1,11 +1,11 @@
 @use './colors.scss' as *;
 $primary-font: 'Montserrat';
-$secondary-font: 'Baloo 2';
+$secondary-font: 'Baloo';
 
 /* baloo-2-regular - latin */
 @font-face {
   font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: 'Baloo 2';
+  font-family: 'Baloo';
   font-style: normal;
   font-weight: 400;
   src: url('../../../assets/font/baloo/baloo-2-v21-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
@@ -13,7 +13,7 @@ $secondary-font: 'Baloo 2';
 /* baloo-2-500 - latin */
 @font-face {
   font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: 'Baloo 2';
+  font-family: 'Baloo';
   font-style: normal;
   font-weight: 500;
   src: url('../../../assets/font/baloo/baloo-2-v21-latin-500.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
@@ -21,7 +21,7 @@ $secondary-font: 'Baloo 2';
 /* baloo-2-600 - latin */
 @font-face {
   font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: 'Baloo 2';
+  font-family: 'Baloo';
   font-style: normal;
   font-weight: 600;
   src: url('../../../assets/font/baloo/baloo-2-v21-latin-600.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
@@ -29,7 +29,7 @@ $secondary-font: 'Baloo 2';
 /* baloo-2-700 - latin */
 @font-face {
   font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: 'Baloo 2';
+  font-family: 'Baloo';
   font-style: normal;
   font-weight: 700;
   src: url('../../../assets/font/baloo/baloo-2-v21-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
@@ -37,10 +37,17 @@ $secondary-font: 'Baloo 2';
 /* baloo-2-800 - latin */
 @font-face {
   font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: 'Baloo 2';
+  font-family: 'Baloo';
   font-style: normal;
   font-weight: 800;
   src: url('../../../assets/font/baloo/baloo-2-v21-latin-800.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+@font-face {
+  font-family: 'Baloo';
+
+  font-weight: normal;
+  src: url('../../../assets/font/baloo/Baloo-Regular.ttf') format('truetype');
+  font-style: normal;
 }
 /* montserrat-100 - latin */
 @font-face {
@@ -114,13 +121,11 @@ $secondary-font: 'Baloo 2';
   font-weight: 900;
   src: url('../../../assets/font/montserrat/montserrat-v26-latin-900.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
-h2 {
-  font-size: 115px;
-}
+
 h3 {
   text-transform: uppercase;
   font-family: $secondary-font;
-  font-size: 96px;
+  font-size: 50px;
   color: white;
   text-align: center;
   font-weight: 900;

@@ -1,0 +1,164 @@
+<section class="contact">
+  <div class="main">
+    <h1>{{ 'contact.title' | translate }}</h1>
+    <div class="row-contact">
+      <div data-aos="fade-right" class="col-6">
+        <h3>{{ 'contact.problem' | translate }}</h3>
+        <p>
+          {{ 'contact.intro' | translate }}
+        </p>
+        <span class="contact-info">{{ 'contact.cta' | translate }}</span>
+        <span class="contact-info-bold"> {{ 'contact.contactme' | translate }}</span>
+        <div class="contact-circle-1"></div>
+      </div>
+      <div data-aos="fade-left" class="col-6">
+        <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm" class="form">
+          <!-- Name -->
+          <div
+            class="form__group"
+            [ngClass]="{
+              error: nameInput?.invalid && (nameInput?.dirty || nameInput?.touched),
+              valid: nameInput?.valid && (nameInput?.dirty || nameInput?.touched),
+            }"
+          >
+            <input
+              #nameInput="ngModel"
+              [(ngModel)]="contactData.name"
+              type="text"
+              name="name"
+              class="form__input"
+              placeholder="{{ 'contact.labelName' | translate }}"
+              id="name"
+              required
+            />
+            <label for="name" class="form__label">{{ 'contact.labelName' | translate }}</label>
+            <span
+              *ngIf="nameInput?.valid && (nameInput?.dirty || nameInput?.touched)"
+              class="validOrNot"
+            >
+              <img src="../../../assets/img/icons/text_box/done.svg" alt="Valid icon" />
+            </span>
+            <span
+              *ngIf="nameInput?.invalid && (nameInput?.dirty || nameInput?.touched)"
+              class="validOrNot"
+            >
+              <img src="../../../assets/img/icons/text_box/error.svg" alt="Valid icon" />
+            </span>
+            <div
+              class="form__error-message"
+              *ngIf="nameInput?.invalid && (nameInput?.dirty || nameInput?.touched)"
+            >
+              {{ 'contact.labelNameRequired' | translate }}
+            </div>
+          </div>
+
+          <!-- Email -->
+          <div
+            class="form__group"
+            [ngClass]="{
+              error: email?.invalid && email?.touched,
+              valid: email?.valid && email?.touched,
+            }"
+          >
+            <input
+              #email="ngModel"
+              [(ngModel)]="contactData.email"
+              type="email"
+              name="email"
+              class="form__input"
+              id="email"
+              placeholder="{{ 'contact.labelEmail' | translate }}"
+              required
+              pattern="[^@\s]+@[^@\s]+\.[^@\s]+"
+            />
+
+            <label for="email" class="form__label">{{ 'contact.labelEmail' | translate }}</label>
+            <span *ngIf="email?.valid && email?.touched" class="validOrNot">
+              <img src="../../../assets/img/icons/text_box/done.svg" alt="Valid icon" />
+            </span>
+            <span *ngIf="email?.invalid && email?.touched" class="validOrNot">
+              <img src="../../../assets/img/icons/text_box/error.svg" alt="Valid icon" />
+            </span>
+            <div class="form__error-message" *ngIf="email?.invalid && email?.touched">
+              {{ 'contact.labelMailRequired' | translate }}
+            </div>
+          </div>
+
+          <!-- Message -->
+          <div
+            class="form__group"
+            [ngClass]="{
+              error: message?.invalid && message?.touched,
+              valid: message?.valid && message?.touched,
+            }"
+          >
+            <textarea
+              #message="ngModel"
+              [(ngModel)]="contactData.message"
+              minlength="7"
+              name="message"
+              class="form__input form__textarea"
+              placeholder="{{ 'contact.labelMessage' | translate }}"
+              id="message"
+              required
+            ></textarea>
+            <label for="message" class="form__label-message">{{
+              'contact.labelMessage' | translate
+            }}</label>
+            <span *ngIf="message?.valid && message?.touched" class="validOrNot">
+              <img src="../../../assets/img/icons/text_box/done.svg" alt="Valid icon" />
+            </span>
+            <span *ngIf="message?.invalid && message?.touched" class="validOrNot">
+              <img src="../../../assets/img/icons/text_box/error.svg" alt="Valid icon" />
+            </span>
+            <div class="form__error-message" *ngIf="message?.invalid && message?.touched">
+              {{ 'contact.labelMessageRequired' | translate }}
+            </div>
+          </div>
+
+          <!-- Privacy Policy Checkbox -->
+          <div class="form__checkbox-group">
+            <input
+              id="read"
+              name="readOrNot"
+              #read="ngModel"
+              [(ngModel)]="readOrNot"
+              type="checkbox"
+              class="form__checkbox-input"
+              required
+            />
+            <label for="read" class="form__checkbox-label">
+              <span class="form__checkbox-button"></span>
+              <div class="privacy-div">
+                {{ 'contact.labelCheckbefore' | translate }}
+                <a class="privacy-div-link" (click)="navigateToPrivacy()" routerLink="/privacy">{{
+                  'contact.labelCheckLink' | translate
+                }}</a>
+                {{ 'contact.labelCheckAfter' | translate }}
+              </div>
+            </label>
+          </div>
+
+          <div class="form__successmail">
+            <h4>Thank you!</h4>
+          </div>
+          <!-- Submit Button -->
+          <div class="form__group">
+            <button
+              type="submit"
+              class="button form__btn-submit validbtn"
+              [disabled]="!isFormValid(contactForm)"
+            >
+              {{ 'buttontxt' | translate }} :)
+            </button>
+          </div>
+          <div class="contact-circle-2"></div>
+          <div class="contact-circle-3"></div>
+        </form>
+      </div>
+    </div>
+    <div class="contact-gototop">
+      <a href="#hello"><img src="img/icons/go_up/go-up-btn.svg" alt="" /></a>
+    </div>
+  </div>
+</section>

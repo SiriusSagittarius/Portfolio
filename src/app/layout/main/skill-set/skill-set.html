@@ -1,6 +1,6 @@
-<section data-aos="fade-up" class="skillset">
+<section id="skillset" data-aos="fade-up" class="skillset">
   <div class="main">
-    <h3>{{ 'skill.title' | translate }}</h3>
+    <h1>{{ 'skill.title' | translate }}</h1>
     <div class="skillset-row">
       <div class="skillset-div" *ngFor="let skill of skillIcons">
         <img [src]="getSkillIconPath(skill.icon)" alt="{{ skill.name }}" />

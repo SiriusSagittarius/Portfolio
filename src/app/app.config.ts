@@ -13,7 +13,7 @@ export const appConfig: ApplicationConfig = {
     provideTranslateService({
       fallbackLang: 'en',
     }),
-    // Diese Funktion ersetzt die alte Factory und stellt den HttpLoader sowie Config-Tokens bereit
+    
     provideTranslateHttpLoader(),
   ],
 };

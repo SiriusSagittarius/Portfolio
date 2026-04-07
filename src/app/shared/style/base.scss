@@ -1,7 +1,7 @@
 @use './colors.scss' as *;
 @use './fonts.scss' as *;
 
-$max-width-page: 1400px;
+$max-width-page: 1440px;
 html {
   scroll-behavior: smooth;
 }
@@ -73,6 +73,7 @@ a {
   text-decoration: none;
   &:hover {
     font-weight: 700;
+    text-decoration: underline;
   }
 }
 .button,

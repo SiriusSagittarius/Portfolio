@@ -19,7 +19,7 @@ export class MyWorkComponent implements OnInit, OnDestroy {
       projectLanguage: 'JavaScript | HTML | CSS',
       description: 'pokedex',
       link: 'Pokedex',
-      liveTest: 'https://svenhaase.developerakademie.net/pokedex/index.html',
+      liveTest: 'https://pokedex.svenhaase.de/index.html',
       safeLiveTest: null as any,
       translatedDescription: '',
     },
@@ -29,7 +29,7 @@ export class MyWorkComponent implements OnInit, OnDestroy {
       projectLanguage: 'JavaScript | HTML | CSS',
       description: 'epl',
       link: 'El_Pollo_Loco',
-      liveTest: 'https://svenhaase.developerakademie.net/el_pollo_loco/index.html',
+      liveTest: 'https://epl.svenhaase.de/index.html',
       safeLiveTest: null as any,
       translatedDescription: '',
     },
@@ -39,7 +39,7 @@ export class MyWorkComponent implements OnInit, OnDestroy {
 
   constructor(
     private translateService: TranslateService,
-    private sanitizer: DomSanitizer
+    private sanitizer: DomSanitizer,
   ) {}
 
   ngOnInit(): void {
@@ -49,7 +49,7 @@ export class MyWorkComponent implements OnInit, OnDestroy {
     });
 
     this.translateProjectDescriptions();
-    
+
     // Auf Sprachwechsel reagieren
     this.languageChangeSubscription = this.translateService.onLangChange.subscribe(() => {
       this.translateProjectDescriptions();

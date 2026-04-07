@@ -1,19 +1,21 @@
 import { Component } from '@angular/core';
-import { ContactFormComponent } from './contact-form/contact-form';
-import { IntroComponent } from './intro/intro';
+import { Contact } from './contact/contact';
+import { Aboutme } from './aboutme/aboutme';
 import { MyWorkComponent} from './my-work/my-work';
 import { SkillSetComponent } from './skill-set/skill-set';
 import { References } from "./references/references";
+import { Hero } from "./hero/hero";
 
 @Component({
   selector: 'app-main',
   standalone: true,
   imports: [
-    IntroComponent,
+    Aboutme,
     SkillSetComponent,
     MyWorkComponent,
-    ContactFormComponent,
-    References
+    Contact,
+    References,
+    Hero
 ],
   templateUrl: './main.html',
   styleUrl: './main.scss'

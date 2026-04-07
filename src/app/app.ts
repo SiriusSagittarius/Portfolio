@@ -2,15 +2,14 @@ import { Component, OnInit, inject, PLATFORM_ID } from '@angular/core';
 import { isPlatformBrowser } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 import { Footer } from './layout/footer/footer';
-import { NavigationComponent } from './shared/components/navigation/navigation';
-import { HeaderComponent } from './layout/header/header';
+import { Header } from './layout/header/header';
 import AOS from 'aos';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, Footer, NavigationComponent, HeaderComponent, TranslateModule],
+  imports: [RouterOutlet, Header, Footer, TranslateModule],
   templateUrl: './app.html',
   styleUrl: './app.scss',
 })

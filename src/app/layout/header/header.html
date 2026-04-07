@@ -1,36 +1,99 @@
-<section class="header">
-  <div class="main">
-    <div class="header-row">
-      <div class="col-6">
+<header class="header">
+  <div class="header-logo">
+    <a href="#">
+      <img src="/img/icons/logo.png" alt="Logo" />
+    </a>
+  </div>
 
-        <div class="header-left">
-            <div class="header-circle-desk"></div>
-         <img
-            class="header-left-img"
-            src=""
-            alt=""
-          /> 
-        </div>
-      </div>
-      <div class="col-6">
-        <div id="hello" class="header-content">
-          <h1 class="header-h1">{{ "header.hello" | translate }}</h1>
-          <h2 class="header-h2-1">Fullstack</h2>
-          <h2 class="header-h2-2">Developer</h2>
-        </div>
-        <div class="header-btn-box">
-          <div class="header-btn-box-scroll">
-            <div class="header-btn-box-scroll-text">scroll</div>  
-            <div class="header-btn-box-scroll-line"> </div>
-          </div>
-            <div class="header-btn-box-social">
-                <a href="https://github.com/SiriusSagittarius" target="_blank"><img src="img/icons/social/github.svg" alt=""></a>
-                <a href="mailto:svenhaaseausmuch@gmail.com" ><img src="icons/social/mail.svg" alt=""></a>
-                
-            </div>  
-          </div>
-        </div>
+  <nav class="nav-bar">
+    <div class="nav-links">
+      <a
+        href="#aboutme"
+        class="nav-item"
+        [class.active]="activeSection === 'aboutme'"
+        (click)="setActiveSection('aboutme')"
+        >{{ 'navigation.aboutme' | translate }}</a
+      >
+      <a
+        href="#skillset"
+        class="nav-item"
+        [class.active]="activeSection === 'skillset'"
+        (click)="setActiveSection('skillset')"
+        >{{ 'navigation.skillset' | translate }}</a
+      >
+      <a
+        href="#mywork"
+        class="nav-item"
+        [class.active]="activeSection === 'mywork'"
+        (click)="setActiveSection('mywork')"
+        >{{ 'navigation.mywork' | translate }}</a
+      >
+    </div>
+
+    <div class="lang-switch">
+      <span
+        class="lang-btn"
+        (click)="switchLanguage('de')"
+        [class.active]="translate.currentLang === 'de'"
+        >DE</span
+      >
+      <span class="lang-sep">/</span>
+      <span
+        class="lang-btn"
+        (click)="switchLanguage('en')"
+        [class.active]="translate.currentLang === 'en' || !translate.currentLang"
+        >EN</span
+      >
+    </div>
+  </nav>
+
+  <!-- Burger Menu Icon -->
+  <div class="burger-menu" (click)="toggleMenu()" [class.open]="isMenuOpen">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <!-- Mobile Overlay -->
+  <div class="mobile-overlay" *ngIf="isMenuOpen" (click)="closeMenu()">
+    <div class="mobile-nav-links" (click)="$event.stopPropagation()">
+      <a
+        href="#aboutme"
+        class="mobile-nav-item"
+        [class.active]="activeSection === 'aboutme'"
+        (click)="setActiveSection('aboutme'); closeMenu()"
+        >{{ 'navigation.aboutme' | translate }}</a
+      >
+      <a
+        href="#skillset"
+        class="mobile-nav-item"
+        [class.active]="activeSection === 'skillset'"
+        (click)="setActiveSection('skillset'); closeMenu()"
+        >{{ 'navigation.skillset' | translate }}</a
+      >
+      <a
+        href="#mywork"
+        class="mobile-nav-item"
+        [class.active]="activeSection === 'mywork'"
+        (click)="setActiveSection('mywork'); closeMenu()"
+        >{{ 'navigation.mywork' | translate }}</a
+      >
+
+      <div class="mobile-lang-switch">
+        <span
+          class="lang-btn"
+          (click)="switchLanguage('de'); closeMenu()"
+          [class.active]="translate.currentLang === 'de'"
+          >DE</span
+        >
+        <span class="lang-sep">/</span>
+        <span
+          class="lang-btn"
+          (click)="switchLanguage('en'); closeMenu()"
+          [class.active]="translate.currentLang === 'en' || !translate.currentLang"
+          >EN</span
+        >
       </div>
     </div>
-  </section>
-  <div class="header-circle-little"></div>
+  </div>
+</header>
