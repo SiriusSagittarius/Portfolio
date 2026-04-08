@@ -1,7 +1,5 @@
 @use '../../../shared/style/colors.scss' as *;
-@use '../../../shared/style/fonts.scss' as *;
 @use '../../../shared/style/mixins.scss' as *;
-@use '../../../shared/style/base.scss' as *;
 
 input[type='checkbox'] {
   display: none;
@@ -35,9 +33,9 @@ span.form__checkbox-button {
   @include linear-gradient-background($white, $white);
   overflow: hidden;
   h1 {
-    font-size: 90px;     
+    font-size: 90px;
     margin-bottom: 80px;
-    text-transform: none; 
+    text-transform: none;
   }
   h3 {
     font-size: 32px;
@@ -57,7 +55,7 @@ span.form__checkbox-button {
     bottom: -157px;
     cursor: pointer;
     &:hover img {
-      content: url("../../../../assets/img/icons/go_up/go-up-btn-2.svg");
+      content: url('/assets/img/icons/go_up/go-up-btn-2.svg');
     }
   }
   &-info {
@@ -90,9 +88,9 @@ span.form__checkbox-button {
     display: flex;
     gap: 20px;
     .col-6:first-child {
-    margin-top: 10px; 
+      margin-top: 10px;
     }
-      .col-6 {
+    .col-6 {
       position: relative;
     }
   }
@@ -342,7 +340,7 @@ span.form__checkbox-button {
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      background-image: url("../../../../assets/img/icons/text_box/check.svg");
+      background-image: url('/assets/img/icons/text_box/check.svg');
       background-size: cover;
       opacity: 0;
       transition: opacity 0.1s;
@@ -358,61 +356,4 @@ span.form__checkbox-button {
 }
 .form__checkbox-input:checked ~ .form__checkbox-label .form__checkbox-button::after {
   opacity: 1;
-}
-
-@media (max-width: 1025px) {
-  .row-contact {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .privacy-div {
-    margin-top: 3px;
-  }
-
-  .contact {
-    padding: 0px 18px 180px 18px;
-    &-circle-1 {
-      bottom: -160%;
-    }
-    &-gototop {
-      bottom: -94px;
-    }
-  }
-  .form {
-    &__input {
-      width: 100%;
-    }
-    &__successmail {
-      width: -webkit-fill-available;
-      position: absolute;
-      top: 0;
-      right: 0;
-      left: 0;
-    }
-    &__group {
-      text-align: center;
-    }
-    &__btn-submit {
-      left: 0;
-    }
-  }
-}
-
-@media (max-width: 720px) {
-  .contact {
-    padding: 0 18px 130px 18px;
-    h2 {
-      font-size: 45px;  
-      margin-bottom: 30px;
-    }
-  }
-}
-
-@media (max-width: 400px) {
-  .contact {
-    &-circle-1 {
-      bottom: -120%;
-    }
-  }
 }

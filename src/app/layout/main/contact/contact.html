@@ -36,13 +36,13 @@
               *ngIf="nameInput?.valid && (nameInput?.dirty || nameInput?.touched)"
               class="validOrNot"
             >
-              <img src="../../../assets/img/icons/text_box/done.svg" alt="Valid icon" />
+              <img src="assets/img/icons/text_box/done.svg" alt="Valid icon" />
             </span>
             <span
               *ngIf="nameInput?.invalid && (nameInput?.dirty || nameInput?.touched)"
               class="validOrNot"
             >
-              <img src="../../../assets/img/icons/text_box/error.svg" alt="Valid icon" />
+              <img src="assets/img/icons/text_box/error.svg" alt="Valid icon" />
             </span>
             <div
               class="form__error-message"
@@ -74,10 +74,10 @@
 
             <label for="email" class="form__label">{{ 'contact.labelEmail' | translate }}</label>
             <span *ngIf="email?.valid && email?.touched" class="validOrNot">
-              <img src="../../../assets/img/icons/text_box/done.svg" alt="Valid icon" />
+              <img src="assets/img/icons/text_box/done.svg" alt="Valid icon" />
             </span>
             <span *ngIf="email?.invalid && email?.touched" class="validOrNot">
-              <img src="../../../assets/img/icons/text_box/error.svg" alt="Valid icon" />
+              <img src="assets/img/icons/text_box/error.svg" alt="Valid icon" />
             </span>
             <div class="form__error-message" *ngIf="email?.invalid && email?.touched">
               {{ 'contact.labelMailRequired' | translate }}
@@ -106,10 +106,10 @@
               'contact.labelMessage' | translate
             }}</label>
             <span *ngIf="message?.valid && message?.touched" class="validOrNot">
-              <img src="../../../assets/img/icons/text_box/done.svg" alt="Valid icon" />
+              <img src="assets/img/icons/text_box/done.svg" alt="Valid icon" />
             </span>
             <span *ngIf="message?.invalid && message?.touched" class="validOrNot">
-              <img src="../../../assets/img/icons/text_box/error.svg" alt="Valid icon" />
+              <img src="assets/img/icons/text_box/error.svg" alt="Valid icon" />
             </span>
             <div class="form__error-message" *ngIf="message?.invalid && message?.touched">
               {{ 'contact.labelMessageRequired' | translate }}
@@ -158,7 +158,7 @@
       </div>
     </div>
     <div class="contact-gototop">
-      <a href="#hello"><img src="img/icons/go_up/go-up-btn.svg" alt="" /></a>
+      <a href="#hello"><img src="assets/img/icons/go_up/go-up-btn.svg" alt="" /></a>
     </div>
   </div>
 </section>

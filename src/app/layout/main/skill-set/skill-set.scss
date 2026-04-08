@@ -1,5 +1,4 @@
 @use '../../../shared/style/colors.scss' as *;
-@use '../../../shared/style/fonts.scss' as *;
 .skillset {
   h1 {
     font-size: 96px;
@@ -16,8 +15,6 @@
     flex-wrap: wrap;
     justify-content: center;
     gap: 60px 0;
-
-   
   }
   &-div {
     width: 20%;
@@ -37,7 +34,6 @@
     &:hover {
       font-weight: 800;
     }
-    
   }
 
   p {

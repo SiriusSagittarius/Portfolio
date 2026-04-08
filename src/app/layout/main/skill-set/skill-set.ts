@@ -9,7 +9,7 @@ import { TranslateModule } from '@ngx-translate/core';
   styleUrl: './skill-set.scss',
 })
 export class SkillSetComponent {
-  imagePath: "img/icons/skill-set/desktop/" | string = "img/icons/skill-set/desktop/";
+  imagePath: "/assets/img/icons/skill-set/desktop/" | string = "/assets/img/icons/skill-set/desktop/";
 
 skillIcons = [
   { icon: 'vuejs.svg', name: 'Vue.js' },

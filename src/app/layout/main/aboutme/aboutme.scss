@@ -1,7 +1,5 @@
 @use '../../../shared/style/colors.scss' as *;
-@use '../../../shared/style/fonts.scss' as *;
 @use '../../../shared/style/mixins.scss' as *;
-@use '../../../shared/style/base.scss' as *;
 
 .intro {
   padding: 120px 18px;
@@ -71,8 +69,8 @@ h1 {
     z-index: -1;
     content: '';
     background-image:
-      url('/img/icons/intro/locb.svg'), url('/img/icons/intro/remoteb.svg'),
-      url('/img/icons/intro/relocb.svg');
+      url('/assets/img/icons/intro/locb.svg'), url('/assets/img/icons/intro/remoteb.svg'),
+      url('/assets/img/icons/intro/relocb.svg');
   }
 }
 
@@ -97,15 +95,15 @@ h1 {
 
   /* Bild für das erste Icon (Location) austauschen */
   &:nth-child(1):hover img {
-    content: url('/img/icons/intro/locb.svg');
+    content: url('/assets/img/icons/intro/locb.svg');
   }
   /* Bild für das zweite Icon (Remote) austauschen */
   &:nth-child(2):hover img {
-    content: url('/img/icons/intro/remoteb.svg');
+    content: url('/assets/img/icons/intro/remoteb.svg');
   }
   /* Bild für das dritte Icon (Relocate) austauschen */
   &:nth-child(3):hover img {
-    content: url('/img/icons/intro/relocb.svg');
+    content: url('/assets/img/icons/intro/relocb.svg');
   }
 }
 
@@ -132,37 +130,5 @@ h1 {
   &:hover {
     background-color: #5988ff;
     color: white;
-  }
-}
-
-@media (max-width: 1199px) {
-  .row-intro {
-    flex-direction: column;
-    gap: 40px;
-    margin-left: 0; /* Reset des linken Abstands für Tablet/Mobile */
-  }
-
-  .col-left,
-  .col-right {
-    width: 100%; /* Verhindert, dass die Boxen auf kleinen Bildschirmen zu breit sind */
-    height: auto;
-  }
-
-  .col-left h2 {
-    font-size: 60px;
-  }
-
-  .intro-circle-large {
-    left: 80%;
-  }
-}
-
-@media (max-width: 768px) {
-  .intro {
-    padding: 60px 18px;
-  }
-
-  .icon-container {
-    gap: 15px;
   }
 }

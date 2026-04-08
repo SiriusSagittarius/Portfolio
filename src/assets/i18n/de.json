@@ -5,16 +5,16 @@
     "title": "Fullstack Developer"
   },
   "aboutme": {
-    "title": "Zusammen arbeiten!",
+    "title": "Gemeinsam mehr erreichen",
     "iam": "Ich bin",
     "location": "wohnhaft\nin Much",
-    "remote": "für Homeoffice\nbereit",
-    "relocate": "für Umzug\noffen",
+    "remote": "offen\nfür alles",
+    "relocate": "Flexibel",
     "letswork": "Ich bin ein Software-Entwickler, der in Much lebt. Seit bereits mehreren Jahren macht es mir großen Spaß, die Ideen von Designern und Firmen zu verwirklichen und ihre Projekte zu begleiten. Ursprünglich bin ich in CSS und JavaScript zu Hause, suche aber aktuell vor allem Herausforderungen im Bereich Angular und React! Bitte kontaktieren Sie mich, falls das für Sie gut passen könnte und wir sprechen darüber."
   },
   "navigation": {
     "aboutme": "Über mich",
-    "skillset": "Fähigkeiten",
+    "skillset": "Qualifikationen",
     "mywork": "Projekte"
   },
   "skill": {
