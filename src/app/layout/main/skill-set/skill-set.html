@@ -1,11 +1,25 @@
-<section id="skillset" data-aos="fade-up" class="skillset">
-  <div class="main">
-    <h1>{{ 'skill.title' | translate }}</h1>
-    <div class="skillset-row">
-      <div class="skillset-div" *ngFor="let skill of skillIcons">
-        <img [src]="getSkillIconPath(skill.icon)" alt="{{ skill.name }}" />
-        <p>{{ skill.name }}</p>
+<section class="skillset">
+  <h1>{{ 'skill.title' | translate }}</h1>
+  <div class="skillset-row">
+    <div
+      class="skillset-div"
+      *ngFor="let skill of skillIcons"
+      (mouseenter)="hoveredSkill = skill"
+      (mouseleave)="hoveredSkill = null"
+    >
+      <div class="icon-wrapper">
+        <img [src]="imagePath + skill.icon" [alt]="skill.name" class="main-icon" />
+
+        <img
+          *ngIf="skill.hoverIcon"
+          [src]="imagePath + skill.hoverIcon"
+          class="hover-bubble"
+          [class.show]="hoveredSkill === skill"
+          alt="Tooltip"
+        />
       </div>
+      
+      <p>{{ skill.name }}</p>
     </div>
   </div>
 </section>

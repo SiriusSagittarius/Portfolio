@@ -21,7 +21,7 @@
 .header {
   width: 100%;
   max-width: 1440px;
-  height: 117px;
+  aspect-ratio: 1440 / 117;
   padding: 24px 5%;
   margin: 0 auto;
   box-sizing: border-box;
@@ -40,7 +40,7 @@
   .nav-bar {
     display: flex;
     align-items: center;
-    margin-left: auto; /* Schiebt die Nav-Bar komplett an den rechten Rand */
+    margin-left: auto;
     gap: 80px;
     flex-wrap: wrap;
   }

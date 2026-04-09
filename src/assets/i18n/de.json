@@ -5,7 +5,7 @@
     "title": "FULLSTACK DEVELOPER"
   },
   "aboutme": {
-    "title": "Gemeinsam mehr erreichen",
+    "title": "Teamwork...",
     "iam": "Ich bin",
     "location": "wohnhaft\nin Much",
     "remote": "offen\nfür alles",
@@ -13,11 +13,11 @@
     "letswork": "„Software-Entwickler aus Much mit der Mentalität: ‚Geht nicht, gibt’s nicht!‘Seit Jahren verwirkliche ich mit Leidenschaft komplexe Designer-Ideen und Firmenprojekte. Mein Fokus liegt aktuell voll auf Python – hier suche ich neue Herausforderungen, um effiziente Lösungen für Ihre technischen Hürden zu finden.Egal wie knifflig die Aufgabe ist: Ich finde den Weg. Kontaktieren Sie mich und wir bringen Ihr Projekt gemeinsam ans Ziel!“ "},
   "navigation": {
     "aboutme": "Über mich",
-    "skillset": "Qualifikationen",
+    "skillset": "Skills",
     "mywork": "Projekte"
   },
   "skill": {
-    "title": "Qualifikationen"
+    "title": "Skills"
   },
 
   "myWork": {

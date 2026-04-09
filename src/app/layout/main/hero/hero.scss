@@ -1,133 +1,118 @@
 @use '../../../shared/style/colors.scss' as *;
 @use '../../../shared/style/mixins.scss' as *;
 
+
+
 .hero {
   position: relative;
-  overflow: hidden;
-  max-width: 1440px;
-  height: 1029px;
-  margin: 0 auto;
-  background-image: url('/assets/img/background/herobg.svg');
-  background-size: cover;
-  background-position: center top;
-  background-repeat: no-repeat;
   width: 100%;
-  &-btn-box {
-    display: flex;
-    justify-content: space-between;
-    height: 45vh;
-    flex-direction: row-reverse; 
+  max-width: 1440px;
+  min-height: 100vh;
+  margin: 0 auto;
+  background-color: #ffffff;
+  overflow: hidden;
+}
 
-    &-scroll {
-      text-transform: uppercase;
-      font-family: $secondary-font;
-      width: 80%;
-      display: flex;
-      align-items: center;
-      justify-content: flex-start;
-      color: $primary-color;
-      font-weight: 500;
-      font-size: 23px;
-      flex-direction: column;
+/* Blauer Kreis oben links */
+.hero-circle {
+  position: absolute;
+  width: 892px;
+  height: 892px;
+  background: radial-gradient(
+    74.22% 74.22% at 19.79% 22.42%,
+    #5988ff 6.25%,
+    #5988ff 51.56%,
+    #0043f0 100%
+  );
+  border-radius: 50%;
+  top: -71px;
+  left: -199px;
+}
 
-      &-line {
-        width: 2px;
-        height: 100%;
-        background-color: $primary-color;
-        margin-top: 30px;
-      }
-    }
+/* Scroll Bereich zusammengefasst */
+.scroll-container {
+  position: absolute;
+  bottom: 0;
+  left: 70%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
 
-    &-social {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      position: absolute;
-      top: 789px;
-      left: 1300px;
-      a {
-        transition: padding-left 0.3s ease; 
-        padding-left: 0;
-        &:hover {
-          padding-left: 15px;
-        }
-        &:not(:last-child) {
-          padding-bottom: 25px;
-        }
-        img {
-          width: 40px;
-          height: 40px;
-        }
-      }
-    }
-  }
+/* Blauer Strich */
+.hero-line {
+  width: 4px;
+  height: 250px;
+  background-color: #5988ff;
+}
 
-  &-circle {
-    &-desk {
-      @include circle(700px, $primary-color, $secondary-color);
-      border-radius: 50%;
-      position: absolute;
-      top: -139px;
-      left: -40%;
-    }
-    &-mobile {
-      @include circle(630px, $primary-color, $secondary-color);
-      border-radius: 50%;
-      position: absolute;
-      top: 0;
-      left: 0%;
-      display: none;
-    }
-  }
+/* Scroll Text */
+.scroll-text {
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 23px;
+  line-height: 120%;
+  color: #5988ff;
+}
 
-  &-circle-little {
-    @include circle(206px, $primary-color, $secondary-color);
-    border-radius: 50%;
-    position: absolute;
-    left: 45%;
-    z-index: -1; 
-    bottom: 140px;
-  }
+/* Textbereich zusammengefasst */
+.hero-content {
+  position: absolute;
+  left: 50%;
+  top: 25%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
 
-  &-left {
-    position: relative;
-    img {
-      height: 100vh;
-      object-fit: cover;
-      left: -40%;
-      position: absolute;
-      z-index: 2; 
-    }
+/* Hello! I am Sven */
+.sven-title {
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 64px;
+  line-height: 100%;
+  color: #5988ff;
+}
 
-    &-img {
-      position: absolute;
-      z-index: 2;
-      top: 0;
-      left: 0;
-      height: 100vh;
-      object-fit: cover;
-    }
-  }
-  &-content {
-    display: flex;
-    position: absolute;
-    z-index: 3; 
-    height: 55vh;
-    justify-content: start;
-    flex-direction: column;
-    padding-top: 20%;
-    padding-left: 51%; 
-  }
-  &-h2 {
-    font-size: 64px;
-  }
-  &-h1 {
-    line-height: 1; 
-    &-1 {
-      font-size: 115px;
-    }
-    &-2 {
-      font-size: 115px;
-    }
-  }
+/* FULLSTACK */
+.fullstack-title {
+  font-family: 'Baloo', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 128px;
+  line-height: 120%;
+  letter-spacing: -0.025em;
+  color: #5988ff;
+}
+
+/* DEVELOPER */
+.developer-title {
+  font-family: 'Baloo', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 118px;
+  line-height: 120%;
+  letter-spacing: -0.02em;
+  color: #5988ff;
+}
+
+/* Social media */
+.social-media {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0;
+  gap: 25px;
+  position: absolute;
+  right: 5%;
+  bottom: 10%;
+}
+
+.social-media img {
+  width: 40px;
+  height: 40px;
+  display: block;
 }

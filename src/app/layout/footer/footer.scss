@@ -1,6 +1,8 @@
 @use '../../shared/style/colors.scss' as *;
 
 .footer {
+  max-width: 1440px;
+  margin: 0 auto;
   width: 100%;
   height: 250px;
   background: radial-gradient(

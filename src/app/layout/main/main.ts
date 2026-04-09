@@ -6,6 +6,7 @@ import { SkillSetComponent } from './skill-set/skill-set';
 import { References } from "./references/references";
 import { Hero } from "./hero/hero";
 
+
 @Component({
   selector: 'app-main',
   standalone: true,
@@ -15,7 +16,7 @@ import { Hero } from "./hero/hero";
     MyWorkComponent,
     Contact,
     References,
-    Hero
+    Hero 
 ],
   templateUrl: './main.html',
   styleUrl: './main.scss'

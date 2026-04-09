@@ -5,8 +5,10 @@
 @use 'aos/dist/aos.css';
 
 body {
-  margin: 0;
-  // padding-bottom: 289px; // Entfernt, da der Footer nicht mehr fixiert ist
+  
+  max-width: 1440px;
+  margin: 0 auto;
+  
 }
 .circle {
   @include circle(100px, $primary-color, $secondary-color);
