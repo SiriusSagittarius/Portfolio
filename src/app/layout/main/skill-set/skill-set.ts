@@ -1,15 +1,14 @@
-import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-skill-set',
   standalone: true,
-  imports: [CommonModule, TranslateModule],
+  imports: [TranslateModule],
   templateUrl: './skill-set.html',
-  styleUrl: './skill-set.scss',
+  styleUrls: ['./skill-set.scss'],
 })
-export class SkillSetComponent {
+export class SkillSet {
   imagePath: string = '/assets/img/icons/skill-set/desktop/';
 
   hoveredSkill: any = null;
@@ -39,6 +38,6 @@ export class SkillSetComponent {
     { icon: 'scrum.svg', name: 'Scrum' },
     { icon: 'sql.svg', name: 'SQL' },
     { icon: 'supabase.svg', name: 'Supabase' },
-    { icon: 'grow.svg', name: 'Growth\nmindset', hoverIcon: 'growth.svg' },
+    { icon: 'grow.svg', name: 'Growth\nmindset', hoverIcon: 'hover.svg' },
   ];
 }

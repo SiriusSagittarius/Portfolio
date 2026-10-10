@@ -1,56 +1,113 @@
-import { CommonModule } from '@angular/common';
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Component } from '@angular/core';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { Subscription } from 'rxjs';
-import { DomSanitizer, SafeUrl } from '@angular/platform-browser';
+import { NgOptimizedImage } from '@angular/common';
+import { ScrollAnimationDirective } from '../../../shared/directives/scroll-animation.directive';
 
 @Component({
   selector: 'app-my-work',
   standalone: true,
-  imports: [CommonModule, TranslateModule],
+  imports: [TranslateModule, NgOptimizedImage, ScrollAnimationDirective],
   templateUrl: './my-work.html',
-  styleUrl: './my-work.scss',
+  styleUrls: ['./my-work.scss'],
 })
-export class MyWorkComponent implements OnInit, OnDestroy {
+export class MyWork {
   projects = [
     {
-      mockup: 'pokedex.png',
-      name: 'Pokedex',
+      mockup: 'join.webp',
+      width: 620,
+      height: 393,
+      name: 'Join',
       projectLanguage: 'JavaScript | HTML | CSS',
-      description: 'pokedex',
-      link: 'Pokedex',
-      liveTest: 'https://pokedex.svenhaase.de/index.html',
-      safeLiveTest: null as any,
+      description: 'join',
+      link: 'join',
+      liveTest: 'https://join.svenhaase.de/',
       translatedDescription: '',
     },
     {
-      mockup: 'pollo_loco.png',
-      name: 'Pollo Loco',
+      mockup: 'pollo_loco.webp',
+      width: 512,
+      height: 320,
+      name: 'El Pollo Loco',
       projectLanguage: 'JavaScript | HTML | CSS',
       description: 'epl',
-      link: 'El_Pollo_Loco',
-      liveTest: 'https://epl.svenhaase.de/index.html',
-      safeLiveTest: null as any,
+      link: 'EL_POLLO_LOCO',
+      liveTest: 'https://epl.svenhaase.de/',
+      translatedDescription: '',
+    },
+    {
+      mockup: 'pokedex.webp',
+      width: 530,
+      height: 334,
+      name: 'Pokedex',
+      projectLanguage: 'Rest-Api |JavaScript | HTML | CSS',
+      description: 'pokedex',
+      link: 'pokedex',
+      liveTest: 'https://pokedex.svenhaase.de/',
+      translatedDescription: '',
+    },
+    {
+      mockup: 'dabubble.webp',
+      width: 620,
+      height: 393,
+      name: 'DaBubble',
+      projectLanguage: 'Angular | Firebase | TypeScript',
+      description: 'dabubble',
+      link: 'dabubble-2',
+      liveTest: 'https://dabubble.svenhaase.de/',
+      translatedDescription: '',
+    },
+    {
+      mockup: 'pollapp.webp',
+      width: 620,
+      height: 393,
+      name: 'PollApp',
+      projectLanguage: 'Angular | Firebase | TypeScript',
+      description: 'pollapp',
+      link: 'pollapp',
+      liveTest: 'https://pollapp.svenhaase.de/',
+      translatedDescription: '',
+    },
+    {
+      mockup: 'shooter.webp',
+      width: 620,
+      height: 393,
+      name: 'Shooter',
+      projectLanguage: 'Angular | Three.js | TypeScript',
+      description: 'shooter',
+      link: '3d-shooter',
+      liveTest: 'https://shooter.svenhaase.de/',
+      translatedDescription: '',
+    },
+    {
+      mockup: 'sauerei.webp',
+      width: 620,
+      height: 393,
+      name: 'Sauerei',
+      projectLanguage: 'Angular | TypeScript',
+      description: 'sauerei',
+      link: 'Sau',
+      liveTest: 'https://sauerei.web.app',
+      translatedDescription: '',
+    },
+    {
+      mockup: 'easytv.webp',
+      width: 620,
+      height: 393,
+      name: 'EasyTV',
+      projectLanguage: 'Java | JavaScript | C++ | Python',
+      description: 'easytv',
+      link: 'easy-tv_Windows',
+      liveTest: 'https://easy-tv.org/',
       translatedDescription: '',
     },
   ];
 
   private languageChangeSubscription: Subscription | undefined;
-
-  constructor(
-    private translateService: TranslateService,
-    private sanitizer: DomSanitizer,
-  ) {}
+  constructor(private translateService: TranslateService) {}
 
   ngOnInit(): void {
-    // URLs für Angular sicher machen
-    this.projects.forEach((project) => {
-      project.safeLiveTest = this.sanitizer.bypassSecurityTrustUrl(project.liveTest.trim());
-    });
-
     this.translateProjectDescriptions();
-
-    // Auf Sprachwechsel reagieren
     this.languageChangeSubscription = this.translateService.onLangChange.subscribe(() => {
       this.translateProjectDescriptions();
     });
@@ -61,7 +118,6 @@ export class MyWorkComponent implements OnInit, OnDestroy {
       this.languageChangeSubscription.unsubscribe();
     }
   }
-
   translateProjectDescriptions(): void {
     this.projects.forEach((project) => {
       const translationKey = `myWork.${project.description}`;
@@ -69,5 +125,9 @@ export class MyWorkComponent implements OnInit, OnDestroy {
         project.translatedDescription = translatedDescription;
       });
     });
+  }
+
+  isEven(index: number): boolean {
+    return index % 2 === 0;
   }
 }

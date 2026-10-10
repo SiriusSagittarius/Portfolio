@@ -1,12 +1,26 @@
 import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
 import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-references',
   standalone: true,
-  imports: [CommonModule, TranslateModule],
+  imports: [TranslateModule],
   templateUrl: './references.html',
-  styleUrl: './references.scss',
+  styleUrls: ['./references.scss'],
 })
-export class References {}
+export class References {
+  currentIndex = 0;
+  readonly totalCards = 3;
+
+  next() {
+    this.currentIndex = (this.currentIndex + 1) % this.totalCards;
+  }
+
+  prev() {
+    this.currentIndex = (this.currentIndex - 1 + this.totalCards) % this.totalCards;
+  }
+
+  setIndex(index: number) {
+    this.currentIndex = index;
+  }
+}

@@ -1,26 +1,16 @@
 import { Component } from '@angular/core';
 import { Contact } from './contact/contact';
-import { Aboutme } from './aboutme/aboutme';
-import { MyWorkComponent} from './my-work/my-work';
-import { SkillSetComponent } from './skill-set/skill-set';
+import { Header } from '../header/header';
+import { Hero } from './hero/hero';
+import { MyWork } from './my-work/my-work';
 import { References } from "./references/references";
-import { Hero } from "./hero/hero";
-
+import { SkillSet } from './skill-set/skill-set';
 
 @Component({
   selector: 'app-main',
   standalone: true,
-  imports: [
-    Aboutme,
-    SkillSetComponent,
-    MyWorkComponent,
-    Contact,
-    References,
-    Hero 
-],
+  imports: [Header, Hero, SkillSet, MyWork, References, Contact],
   templateUrl: './main.html',
-  styleUrl: './main.scss'
+  styleUrls: ['./main.scss'],
 })
-export class Main {
-
-}
+export class Main {}

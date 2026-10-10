@@ -1,10 +1,13 @@
 import { Routes } from '@angular/router';
-import { Main } from './layout/main/main';
-import { ImprintComponent } from './shared/components/imprint/imprint';
-import { Privacy } from './shared/components/privacy/privacy'; // Pfad anpassen!
 
 export const routes: Routes = [
-  { path: '', component: Main },
-  { path: 'imprint', component: ImprintComponent },
-  { path: 'privacy', component: Privacy },
+  { path: '', loadComponent: () => import('./layout/main/main').then((m) => m.Main) },
+  {
+    path: 'imprint',
+    loadComponent: () => import('./shared/components/imprint/imprint').then((m) => m.Imprint),
+  },
+  {
+    path: 'privacy',
+    loadComponent: () => import('./shared/components/privacy/privacy').then((m) => m.Privacy),
+  },
 ];

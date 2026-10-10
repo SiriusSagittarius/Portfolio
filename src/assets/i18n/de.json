@@ -1,30 +1,42 @@
 {
   "buttontxt": "Nachricht senden",
-  "hero": {
+  "nav": {
+    "aboutme": "Über mich",
+    "skills": "Skills",
+    "work": "Projekte",
+    "contact": "Kontakt"
+  },
+  "header": {
     "hello": "Hallo, ich bin Sven",
-    "title": "FULLSTACK DEVELOPER"
+    "title1": "FULLSTACK ",
+    "title2": "DEVELOPER",
+    "scroll": "SCROLL"
   },
   "aboutme": {
-    "title": "Teamwork...",
+    "title": "Lassen Sie\nuns starten",
     "iam": "Ich bin",
     "location": "wohnhaft\nin Much",
     "remote": "offen\nfür alles",
     "relocate": "Flexibel",
-    "letswork": "„Software-Entwickler aus Much mit der Mentalität: ‚Geht nicht, gibt’s nicht!‘Seit Jahren verwirkliche ich mit Leidenschaft komplexe Designer-Ideen und Firmenprojekte. Mein Fokus liegt aktuell voll auf Python – hier suche ich neue Herausforderungen, um effiziente Lösungen für Ihre technischen Hürden zu finden.Egal wie knifflig die Aufgabe ist: Ich finde den Weg. Kontaktieren Sie mich und wir bringen Ihr Projekt gemeinsam ans Ziel!“ "},
-  "navigation": {
-    "aboutme": "Über mich",
-    "skillset": "Skills",
-    "mywork": "Projekte"
+    "letswork": "„Software-Entwickler aus Much mit der Mentalität: ‚Geht nicht, gibt’s nicht!‘\n\nMein Fokus liegt aktuell voll auf Python – hier suche ich neue Herausforderungen, um effiziente Lösungen für Ihre technischen Hürden zu finden.\n\nEgal wie knifflig die Aufgabe ist: Ich finde den Weg. Kontaktieren Sie mich und wir bringen Ihr Projekt gemeinsam ans Ziel!\n\nLassen Sie uns gemeinsam entwickeln!“",
+    "buttontxt": "Nachricht senden"
   },
+
   "skill": {
     "title": "Skills"
   },
 
   "myWork": {
-    "title": "Meine Arbeit",
-    "intro": "Folgend finden Sie eine Übersicht meiner Arbeit.",
+    "title": "Projekte",
+    "hero": "Folgend finden Sie eine Übersicht meiner Projekte.",
     "pokedex": "Digitales Pokedex-Register: Entwicklung einer datengetriebenen Anwendung basierend auf einem objektorientierten Ansatz. Ein Projekt, das moderne Web-Technologien mit der Logik eines digitalen Lexikons verbindet!",
-    "epl": "Jump and Run Spiel basierend auf einem Objektorientierten Ansatz. Einsammeln von Münzen, werfen von Objekten und ein spezieller Endboss-Kampf!"
+    "epl": "Jump and Run Spiel basierend auf einem Objektorientierten Ansatz. Einsammeln von Münzen, werfen von Objekten und ein spezieller Endboss-Kampf!",
+    "join": "Aufgabenmanagementsystem basierend auf dem Kanban-Modell. Erstellung und Organisation von Aufgaben inklusive Drag-and-Drop-Funktion sowie Ticketzuordnung und Kategorienstruktur.",
+    "dabubble": "Slack-inspirierte Team-Chat-Anwendung mit Echtzeit-Messaging: Direktnachrichten, Channels, Threads und Emoji-Reaktionen. Umgesetzt mit Angular im Frontend und Firebase (Auth & Firestore) als Backend – im Team entwickelt.",
+    "pollapp": "Anwendung zum Erstellen und Teilen von Live-Umfragen mit Echtzeit-Auswertung der Antworten. Entwickelt mit Angular und Firebase als Backend für die Datenhaltung in Echtzeit.",
+    "shooter": "3D-Ego-Shooter, umgesetzt in Angular mit Three.js. Neben dem klassischen Ballern lässt sich auch ein Auto fahren oder auf einem Besen durch die Welt fliegen.",
+    "sauerei": "Arcade-Spiel im Stil von Moorhuhn, umgesetzt mit Angular. Schnelle Reaktionen und einfache, süchtig machende Spielmechanik stehen im Vordergrund.",
+    "easytv": "Kodi-Fork und Multimedia-Player mit integriertem Webview und Adblocker. Verfügbar für Android, Windows und Linux, macOS folgt in Kürze."
   },
   "references": {
     "title": "Sie brauchen einen Teamplayer?",
@@ -48,7 +60,7 @@
   "contact": {
     "title": "Kontakt",
     "problem": "Stehen Sie vor einer Herausforderung oder haben eine Idee für ein Projekt?",
-    "intro": " „Als Fullstack-Entwickler schaffe ich mit Angular und sauberem Code intuitive Nutzererlebnisse und echten Mehrwert für Ihre Projekte. Kontaktieren Sie mich – ich freue mich auf den Austausch!“",
+    "hero": " „Angular-Frontend trifft Python-Backend. Ich biete Clean Code und messbaren Mehrwert für Ihre digitale Vision. Lassen Sie uns gemeinsam Ihr Projekt starten!",
     "cta": "Ich freue mich wenn Sie",
     "contactme": " Kontakt mit mir aufnehmen!",
     "labelName": "Name",
@@ -59,7 +71,8 @@
     "labelMessageRequired": "Ihre Nachricht ist zu kurz.",
     "labelCheckbefore": "Ich habe die ",
     "labelCheckLink": "Datenschutzrichtlinie",
-    "labelCheckAfter": "gelesen und stimme der Verarbeitung meiner Daten gemäß den darin beschriebenen Bedingungen zu."
+    "labelCheckAfter": "gelesen und stimme der Verarbeitung meiner Daten gemäß den darin beschriebenen Bedingungen zu.",
+    "buttontxt": "Nachricht senden"
   },
   "imprint": {
     "title": "Impressum",
@@ -67,7 +80,7 @@
     "students": "Sven Haase",
     "address": "Hauptstr.28",
     "location": "53804 Much",
-    "email_label": "Email: svenhaaseausmuch@gmail.com",
+    "email_label": "Email: info@svenhaase.de",
     "terms_h": "Annahme der Bedingungen",
     "terms_p": "Durch den Zugriff auf und die Nutzung von Portfolio (Produkt) erkennen Sie die folgenden Bedingungen sowie alle Richtlinien oder Änderungen an, die Ihnen von Zeit zu Zeit präsentiert werden können. Wir, die aufgeführten Studenten, können die Bedingungen von Zeit zu Zeit ohne vorherige Ankündigung aktualisieren oder ändern.",
     "scope_h": "Umfang und Eigentum am Produkt",
@@ -81,7 +94,7 @@
     "disclaimer_p": "Portfolio wird im Ist-Zustand bereitgestellt, ohne jegliche ausdrückliche oder stillschweigende Gewährleistung, einschließlich, aber nicht beschränkt auf die stillschweigende Gewährleistung der Marktgängigkeit, der Eignung für einen bestimmten Zweck und der Nichtverletzung von Rechten Dritter. In keinem Fall haften wir, die aufgeführten Studenten oder die Developer Akademie, für direkte, indirekte, zufällige, besondere oder Folgeschäden, einschließlich entgangenem Gewinn, Geschäftswert, Datennutzung oder anderen immateriellen Verlusten, die aus der Nutzung von Portfolio entstehen.",
     "indemnity_h": "Entschädigung",
     "indemnity_p": "Sie erklären sich damit einverstanden, uns, die aufgeführten Studenten, die Developer Akademie und unsere Partner schadlos zu halten von jeglichen Ansprüchen, Verlusten oder Haftungen (einschließlich Anwaltskosten), die aus Ihrer Nutzung von Portfolio oder Ihrem Verstoß gegen diesen rechtlichen Hinweis resultieren.",
-    "footer": "Bei Fragen oder Hinweisen kontaktieren Sie uns bitte unter Email: svenhaaseausmuch@gmail.com.",
+    "footer": "Bei Fragen oder Hinweisen kontaktieren Sie uns bitte unter Email: info@svenhaase.de.",
     "date": "Datum: 26. April 2026"
   },
   "privacy": {

@@ -1,25 +1,28 @@
 <section class="contact">
   <div class="main">
-    <h1>{{ 'contact.title' | translate }}</h1>
+    <div class="contact-circle-3"></div>
+    <h3 class="h2">{{ 'contact.title' | translate }}</h3>
     <div class="row-contact">
-      <div data-aos="fade-right" class="col-6">
-        <h3>{{ 'contact.problem' | translate }}</h3>
+      <div appScrollAnimation="fade-right" class="col-6">
+        <h4>
+          <span class="color-blue">{{ 'contact.problem' | translate }}</span>
+        </h4>
         <p>
-          {{ 'contact.intro' | translate }}
+          {{ 'contact.hero' | translate }}
         </p>
-        <span class="contact-info">{{ 'contact.cta' | translate }}</span>
-        <span class="contact-info-bold"> {{ 'contact.contactme' | translate }}</span>
+        <p>
+          <span class="contact-info">{{ 'contact.cta' | translate }}</span>
+          <span class="contact-info-bold"> {{ 'contact.contactme' | translate }}</span>
+        </p>
         <div class="contact-circle-1"></div>
       </div>
-      <div data-aos="fade-left" class="col-6">
+      <div appScrollAnimation="fade-left" class="col-6">
         <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm" class="form">
           <!-- Name -->
           <div
             class="form__group"
-            [ngClass]="{
-              error: nameInput?.invalid && (nameInput?.dirty || nameInput?.touched),
-              valid: nameInput?.valid && (nameInput?.dirty || nameInput?.touched),
-            }"
+            [class.error]="nameInput.invalid && (nameInput.dirty || nameInput.touched)"
+            [class.valid]="nameInput.valid && (nameInput.dirty || nameInput.touched)"
           >
             <input
               #nameInput="ngModel"
@@ -29,36 +32,49 @@
               class="form__input"
               placeholder="{{ 'contact.labelName' | translate }}"
               id="name"
+              autocomplete="name"
               required
+              [attr.aria-label]="'contact.labelName' | translate"
+              [attr.aria-invalid]="
+                nameInput.invalid && (nameInput.dirty || nameInput.touched) ? true : null
+              "
+              [attr.aria-describedby]="
+                nameInput.invalid && (nameInput.dirty || nameInput.touched) ? 'name-error' : null
+              "
             />
             <label for="name" class="form__label">{{ 'contact.labelName' | translate }}</label>
-            <span
-              *ngIf="nameInput?.valid && (nameInput?.dirty || nameInput?.touched)"
-              class="validOrNot"
-            >
-              <img src="assets/img/icons/text_box/done.svg" alt="Valid icon" />
-            </span>
-            <span
-              *ngIf="nameInput?.invalid && (nameInput?.dirty || nameInput?.touched)"
-              class="validOrNot"
-            >
-              <img src="assets/img/icons/text_box/error.svg" alt="Valid icon" />
-            </span>
-            <div
-              class="form__error-message"
-              *ngIf="nameInput?.invalid && (nameInput?.dirty || nameInput?.touched)"
-            >
-              {{ 'contact.labelNameRequired' | translate }}
-            </div>
+
+            @if (nameInput.valid && (nameInput.dirty || nameInput.touched)) {
+              <span class="validOrNot">
+                <img
+                  ngSrc="assets/img/icons/text_box/done.svg"
+                  width="24"
+                  height="24"
+                  alt="Valid icon"
+                />
+              </span>
+            }
+
+            @if (nameInput.invalid && (nameInput.dirty || nameInput.touched)) {
+              <span class="validOrNot">
+                <img
+                  ngSrc="assets/img/icons/text_box/error.svg"
+                  width="24"
+                  height="24"
+                  alt="Invalid icon"
+                />
+              </span>
+              <div id="name-error" class="form__error-message" aria-live="polite">
+                {{ 'contact.labelNameRequired' | translate }}
+              </div>
+            }
           </div>
 
           <!-- Email -->
           <div
             class="form__group"
-            [ngClass]="{
-              error: email?.invalid && email?.touched,
-              valid: email?.valid && email?.touched,
-            }"
+            [class.error]="email.invalid && email.touched"
+            [class.valid]="email.valid && email.touched"
           >
             <input
               #email="ngModel"
@@ -68,52 +84,90 @@
               class="form__input"
               id="email"
               placeholder="{{ 'contact.labelEmail' | translate }}"
+              autocomplete="email"
               required
               pattern="[^@\s]+@[^@\s]+\.[^@\s]+"
+              [attr.aria-label]="'contact.labelEmail' | translate"
+              [attr.aria-invalid]="email.invalid && email.touched ? true : null"
+              [attr.aria-describedby]="email.invalid && email.touched ? 'email-error' : null"
             />
 
             <label for="email" class="form__label">{{ 'contact.labelEmail' | translate }}</label>
-            <span *ngIf="email?.valid && email?.touched" class="validOrNot">
-              <img src="assets/img/icons/text_box/done.svg" alt="Valid icon" />
-            </span>
-            <span *ngIf="email?.invalid && email?.touched" class="validOrNot">
-              <img src="assets/img/icons/text_box/error.svg" alt="Valid icon" />
-            </span>
-            <div class="form__error-message" *ngIf="email?.invalid && email?.touched">
-              {{ 'contact.labelMailRequired' | translate }}
-            </div>
+
+            @if (email.valid && email.touched) {
+              <span class="validOrNot">
+                <img
+                  ngSrc="assets/img/icons/text_box/done.svg"
+                  width="24"
+                  height="24"
+                  alt="Valid icon"
+                />
+              </span>
+            }
+
+            @if (email.invalid && email.touched) {
+              <span class="validOrNot">
+                <img
+                  ngSrc="assets/img/icons/text_box/error.svg"
+                  width="24"
+                  height="24"
+                  alt="Invalid icon"
+                />
+              </span>
+              <div id="email-error" class="form__error-message" aria-live="polite">
+                {{ 'contact.labelMailRequired' | translate }}
+              </div>
+            }
           </div>
 
           <!-- Message -->
           <div
             class="form__group"
-            [ngClass]="{
-              error: message?.invalid && message?.touched,
-              valid: message?.valid && message?.touched,
-            }"
+            [class.error]="message.invalid && message.touched"
+            [class.valid]="message.valid && message.touched"
           >
             <textarea
               #message="ngModel"
               [(ngModel)]="contactData.message"
-              minlength="7"
+              minlength="4"
               name="message"
               class="form__input form__textarea"
               placeholder="{{ 'contact.labelMessage' | translate }}"
               id="message"
+              autocomplete="off"
               required
+              [attr.aria-label]="'contact.labelMessage' | translate"
+              [attr.aria-invalid]="message.invalid && message.touched ? true : null"
+              [attr.aria-describedby]="message.invalid && message.touched ? 'message-error' : null"
             ></textarea>
             <label for="message" class="form__label-message">{{
               'contact.labelMessage' | translate
             }}</label>
-            <span *ngIf="message?.valid && message?.touched" class="validOrNot">
-              <img src="assets/img/icons/text_box/done.svg" alt="Valid icon" />
-            </span>
-            <span *ngIf="message?.invalid && message?.touched" class="validOrNot">
-              <img src="assets/img/icons/text_box/error.svg" alt="Valid icon" />
-            </span>
-            <div class="form__error-message" *ngIf="message?.invalid && message?.touched">
-              {{ 'contact.labelMessageRequired' | translate }}
-            </div>
+
+            @if (message.valid && message.touched) {
+              <span class="validOrNot">
+                <img
+                  ngSrc="assets/img/icons/text_box/done.svg"
+                  width="24"
+                  height="24"
+                  alt="Valid icon"
+                />
+              </span>
+            }
+
+            @if (message.invalid && message.touched) {
+              <span class="validOrNot">
+                <img
+                  ngSrc="assets/img/icons/text_box/error.svg"
+                  width="24"
+                  height="24"
+                  alt="Invalid icon"
+                />
+              </span>
+              <div id="message-error" class="form__error-message" aria-live="polite">
+                {{ 'contact.labelMessageRequired' | translate }}
+              </div>
+            }
           </div>
 
           <!-- Privacy Policy Checkbox -->
@@ -126,6 +180,7 @@
               type="checkbox"
               class="form__checkbox-input"
               required
+              [attr.aria-label]="'contact.labelCheckLink' | translate"
             />
             <label for="read" class="form__checkbox-label">
               <span class="form__checkbox-button"></span>
@@ -139,8 +194,13 @@
             </label>
           </div>
 
-          <div class="form__successmail">
-            <h4>Thank you!</h4>
+          <div
+            class="form__successmail"
+            [class.success-visible]="isSuccessMessageVisible()"
+            role="status"
+            aria-live="polite"
+          >
+            <p class="success-text">Thank you!</p>
           </div>
           <!-- Submit Button -->
           <div class="form__group">
@@ -149,16 +209,30 @@
               class="button form__btn-submit validbtn"
               [disabled]="!isFormValid(contactForm)"
             >
-              {{ 'buttontxt' | translate }} :)
+              {{ 'contact.buttontxt' | translate }} :)
             </button>
           </div>
           <div class="contact-circle-2"></div>
-          <div class="contact-circle-3"></div>
         </form>
       </div>
     </div>
     <div class="contact-gototop">
-      <a href="#hello"><img src="assets/img/icons/go_up/go-up-btn.svg" alt="" /></a>
+      <button class="gototop-btn" (click)="scrollToTop()" aria-label="Zurück nach oben">
+        <img
+          class="btn-normal"
+          ngSrc="assets/img/icons/go_up/go-up-btn.svg"
+          width="40"
+          height="40"
+          alt=""
+        />
+        <img
+          class="btn-hover"
+          ngSrc="assets/img/icons/go_up/go-up-btn-2.svg"
+          width="40"
+          height="40"
+          alt=""
+        />
+      </button>
     </div>
   </div>
 </section>

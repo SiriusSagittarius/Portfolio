@@ -1,35 +1,22 @@
-import { Component, OnInit, inject, PLATFORM_ID } from '@angular/core';
-import { isPlatformBrowser } from '@angular/common';
+import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { Footer } from './layout/footer/footer';
-import { Header } from './layout/header/header';
-import AOS from 'aos';
+import { Navigation } from './layout/navigation/navigation';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, Header, Footer, TranslateModule],
+  
+  imports: [RouterOutlet, Footer, Navigation, TranslateModule] as const,
   templateUrl: './app.html',
-  styleUrl: './app.scss',
+  styleUrls: ['./app.scss'],
 })
-export class App implements OnInit {
-  private translate = inject(TranslateService);
-  private platformId = inject(PLATFORM_ID);
+export class App {
   title = 'Sven Haase';
 
-  constructor() {
-    this.translate.addLangs(['en', 'de']);
+  constructor(public translate: TranslateService) {
+    this.translate.setDefaultLang('en');
     this.translate.use('en');
-  }
-
-  ngOnInit() {
-    if (isPlatformBrowser(this.platformId)) {
-      AOS.init();
-    }
-  }
-
-  switchLanguage(lang: string) {
-    this.translate.use(lang);
   }
 }

@@ -1,8 +1,13 @@
 @use '../../../shared/style/colors.scss' as *;
+@use '../../../shared/style/fonts.scss' as *;
 @use '../../../shared/style/mixins.scss' as *;
+@use '../../../shared/style/base.scss' as *;
 
 input[type='checkbox'] {
-  display: none;
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
 }
 span.form__checkbox-button {
   cursor: pointer;
@@ -18,7 +23,7 @@ span.form__checkbox-button {
 }
 
 .privacy-div {
-  width: 92%;
+  flex: 1;
 }
 .privacyPolicyErrorVisible {
   top: 49px;
@@ -28,23 +33,34 @@ span.form__checkbox-button {
   display: block;
 }
 .contact {
-  padding: 200px 30px;
-  min-height: 940px;
-  @include linear-gradient-background($white, $white);
+  padding: 80px 30px;
+  @include linear-gradient-background($white, $linear-color);
   overflow: hidden;
-  h1 {
-    font-size: 90px;
-    margin-bottom: 80px;
-    text-transform: none;
+
+  // Ueberschrift so gross wie die anderen Sektions-Titel (h2 = 90px).
+  // Noetig, weil h3 aus fonts.scss sonst die kleinere Groesse (45px) erzwingt.
+  // Fluide Groesse -> laeuft auf keiner Breite ueber.
+  h3.h2 {
+    font-size: clamp(40px, 7vw, 90px);
+    white-space: normal;
+    overflow-wrap: break-word;
   }
-  h3 {
-    font-size: 32px;
-    color: $primary-color;
+
+  h4 {
+    font-size: 20px;
     font-family: $primary-font;
     font-weight: 700;
     text-align: left;
     margin: 0px 0px 40px 0px;
     text-transform: none;
+
+    .color-white {
+      color: $white;
+    }
+
+    .color-blue {
+      color: $text-blue;
+    }
   }
   p {
     font-size: 16px;
@@ -52,16 +68,32 @@ span.form__checkbox-button {
   &-gototop {
     position: absolute;
     left: 0;
-    bottom: -157px;
+    bottom: -57px;
     cursor: pointer;
-    &:hover img {
-      content: url('/assets/img/icons/go_up/go-up-btn-2.svg');
+
+    .gototop-btn {
+      background: transparent;
+      border: none;
+      padding: 0;
+      cursor: pointer;
+    }
+
+    .btn-hover {
+      display: none;
+    }
+    &:hover {
+      .btn-normal {
+        display: none;
+      }
+      .btn-hover {
+        display: block;
+      }
     }
   }
   &-info {
-    color: $primary-color;
+    color: $text-blue;
     &-bold {
-      color: $primary-color;
+      color: $text-blue;
       font-weight: 700;
     }
   }
@@ -75,21 +107,18 @@ span.form__checkbox-button {
     @include circle(73px, $primary-color, $secondary-color);
     position: absolute;
     right: 0;
-    bottom: -100px;
+    bottom: 0px;
   }
   &-circle-3 {
-    @include circle(130px, $primary-color, $secondary-color);
+    @include circle(73px, $primary-color, $secondary-color);
     position: absolute;
-    right: 60%;
-    bottom: 700px;
+    right: 0;
+    top: -10px;
   }
   .row-contact {
     position: relative;
     display: flex;
     gap: 20px;
-    .col-6:first-child {
-      margin-top: 10px;
-    }
     .col-6 {
       position: relative;
     }
@@ -97,24 +126,21 @@ span.form__checkbox-button {
 }
 
 .form {
-  position: relative; // Added to correctly position absolutely positioned children
-  h4 {
+  .success-text {
     margin: 0;
     color: $white;
+    font-size: 24px;
+    font-weight: bold;
   }
   &__successmail {
-    text-align: center;
-    height: auto;
-    transition: opacity 0.5s ease-in-out;
     position: absolute;
-    background: linear-gradient(120deg, #57e8a2, #33b476);
-    color: white;
     top: 0;
-    display: flex;
+    background: linear-gradient(120deg, $primary-color, $secondary-color);
+    color: white;
     border-radius: 8px;
     height: 110%;
-    align-items: center;
     width: 100%;
+    align-items: center;
     justify-content: center;
     text-align: center;
     display: none;
@@ -136,8 +162,8 @@ span.form__checkbox-button {
     height: 150px;
   }
   &__btn-submit {
-    top: 60px;
-    left: 30%;
+    margin: 40px auto 0;
+    display: block;
     &:disabled {
       cursor: not-allowed;
       opacity: 0.5;
@@ -146,6 +172,8 @@ span.form__checkbox-button {
     }
     &:hover {
       transform: none;
+      background-color: $white;
+      color: $primary-color;
     }
   }
 
@@ -161,7 +189,7 @@ span.form__checkbox-button {
     padding: 17px 15px;
     border-radius: 10px;
     background-color: $white;
-    border: 1px solid $primary-color;
+    border: 1px solid $text-blue;
     width: 100%;
     display: block;
     position: relative;
@@ -172,15 +200,15 @@ span.form__checkbox-button {
     &:focus {
       outline: none;
       box-shadow: 0 1rem 2rem rgba(#333, 0.1);
-      border: 2px solid $primary-color;
+      border: 2px solid $text-blue;
     }
 
     &:focus:invalid {
       border: 2px solid $error-color;
     }
 
-    &::-webkit-input-placeholder {
-      color: grey;
+    &::placeholder {
+      color: #595959; /* Dunkleres Grau für 4.5:1 Kontrast */
     }
   }
 
@@ -221,7 +249,7 @@ span.form__checkbox-button {
     padding: 17px 15px;
     border-radius: 9px;
     background-color: $white;
-    border: 1px solid $primary-color;
+    border: 1px solid $text-blue;
     width: 100%;
     height: 150px;
     display: block;
@@ -232,15 +260,15 @@ span.form__checkbox-button {
     &:focus {
       outline: none;
       box-shadow: 0 1rem 2rem rgba(#333, 0.1);
-      border: 2px solid $primary-color;
+      border: 2px solid $text-blue;
     }
 
     &:focus:invalid {
       border: 2px solid $error-color;
     }
 
-    &::-webkit-input-placeholder {
-      color: grey;
+    &::placeholder {
+      color: #595959; /* Dunkleres Grau für 4.5:1 Kontrast */
     }
   }
 
@@ -249,11 +277,7 @@ span.form__checkbox-button {
     transform: translateY(-140px);
   }
 
-  &__textarea:focus:placeholder-shown + .form__label-message {
-    opacity: 1;
-    transform: translateY(-170px);
-  }
-
+  &__textarea:focus:placeholder-shown + .form__label-message,
   &__textarea:focus + .form__label-message {
     opacity: 1;
     transform: translateY(-170px);
@@ -270,14 +294,6 @@ span.form__checkbox-button {
     padding: 0px 10px;
   }
 
-  .form__label-message {
-    transition: all 0.3s;
-    background: transparent;
-    transform: translateY(-170px);
-    background: white;
-    opacity: 1;
-  }
-
   &__checkbox-group {
     width: 100%;
     display: inline-block;
@@ -285,7 +301,11 @@ span.form__checkbox-button {
   }
 
   &__checkbox-input {
-    display: none !important;
+    /* Accessibility-Fix */
+    position: absolute !important;
+    opacity: 0;
+    width: 0;
+    height: 0;
   }
 
   &__checkbox-label {
@@ -293,12 +313,20 @@ span.form__checkbox-button {
     cursor: pointer;
     position: relative;
     display: flex;
-    justify-content: space-between;
-    gap: 20px;
+    align-items: flex-start;
+    gap: 15px;
 
-    &:hover {
-      .privacy-div-link {
-        font-weight: 700;
+    .privacy-div-link {
+      text-decoration: none;
+      color: $text-blue; /* Deutlich erkennbarer Link */
+      font-weight: 600;
+      cursor: pointer;
+      display: inline-block;
+      transition: transform 0.2s ease;
+
+      &:hover {
+        text-decoration: underline;
+        transform: scale(1.05);
       }
     }
   }
@@ -306,16 +334,12 @@ span.form__checkbox-button {
   &__checkbox-button {
     height: 26px;
     width: 26px;
-    border: 2px solid $primary-color;
+    border: 2px solid $text-blue;
     border-radius: 5px;
     display: inline-block;
     position: relative;
     cursor: pointer;
-    &:hover {
-      + .form__checkbox-label .privacy-div-link {
-        font-weight: 700;
-      }
-    }
+
     &::before {
       content: '';
       display: block;
@@ -355,6 +379,73 @@ span.form__checkbox-button {
     opacity: 1;
   }
 }
-.form__checkbox-input:checked ~ .form__checkbox-label .form__checkbox-button::after {
-  opacity: 1;
+
+@media (max-width: 1025px) {
+  .row-contact {
+    flex-direction: column;
+    gap: 50px;
+  }
+
+  .row-contact .col-6 {
+    width: 100%;
+  }
+
+  .privacy-div {
+    margin-top: 3px;
+
+    &-link {
+      text-decoration: none;
+    }
+  }
+
+  .contact {
+    padding: 0px 18px 80px 18px;
+    &-circle-1 {
+      left: -250px;
+      bottom: -160%;
+    }
+    &-gototop {
+      bottom: -75px;
+    }
+  }
+  .form {
+    &__input {
+      width: 100%;
+    }
+    &__successmail {
+      width: -webkit-fill-available;
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: 0;
+    }
+    &__group {
+      text-align: center;
+    }
+  }
+}
+
+@media (max-width: 720px) {
+  .contact {
+    padding: 0 18px 80px 18px;
+    h2 {
+      margin-bottom: 30px;
+    }
+    &-circle-1 {
+      bottom: -120%;
+    }
+    &-circle-2 {
+      width: 42px;
+      height: 42px;
+    }
+  }
+}
+
+@media (max-width: 400px) {
+  .contact {
+    &-circle-3 {
+      top: -90px;
+      right: 75px;
+    }
+  }
 }

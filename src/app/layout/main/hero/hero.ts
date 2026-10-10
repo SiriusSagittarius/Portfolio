@@ -1,11 +1,18 @@
 import { Component } from '@angular/core';
-import { TranslateModule } from '@ngx-translate/core';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
+import { NgOptimizedImage } from '@angular/common';
 
 @Component({
   selector: 'app-hero',
   standalone: true,
-  imports: [TranslateModule],
+  imports: [TranslateModule, NgOptimizedImage],
   templateUrl: './hero.html',
-  styleUrl: './hero.scss',
+  styleUrls: ['./hero.scss'],
 })
-export class Hero {}
+export class Hero {
+  constructor(public translateService: TranslateService) {}
+
+  changeLanguage(langCode: string) {
+    this.translateService.use(langCode);
+  }
+}
