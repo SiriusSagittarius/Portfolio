@@ -1,7 +1,7 @@
 <header class="header">
   <div class="header-logo">
     <a href="#">
-      <img src="assets/img/icons/logo.png" alt="Logo" />
+      <img src="/assets/img/icons/logo.png" alt="Logo" />
     </a>
   </div>
 
@@ -47,14 +47,13 @@
     </div>
   </nav>
 
-  <!-- Burger Menu Icon -->
   <div class="burger-menu" (click)="toggleMenu()" [class.open]="isMenuOpen">
     <span></span>
     <span></span>
     <span></span>
   </div>
 
-  <!-- Mobile Overlay -->
+ 
   <div class="mobile-overlay" *ngIf="isMenuOpen" (click)="closeMenu()">
     <div class="mobile-nav-links" (click)="$event.stopPropagation()">
       <a

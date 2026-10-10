@@ -97,6 +97,7 @@ span.form__checkbox-button {
 }
 
 .form {
+  position: relative; // Added to correctly position absolutely positioned children
   h4 {
     margin: 0;
     color: $white;
