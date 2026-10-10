@@ -1,0 +1,30 @@
+# Sven Haase
+
+> Portfolio of Sven Haase, a fullstack developer based in Much (Rhein-Sieg district, near Cologne/Bonn), Germany. He builds web applications with Angular, TypeScript and JavaScript, and is open to remote work and to relocating.
+
+Sven has spent several years turning the ideas of designers and companies into working web applications and supporting their projects. His roots are in CSS and JavaScript. He is currently looking mainly for challenges in Angular and React.
+
+The website is a single-page Angular application in English and German, with a language switch in the header. It has these sections: About me, Skill set, My work, References and Contact (a contact form).
+
+Skill set: Angular, TypeScript, JavaScript, HTML, CSS, RxJS, Vue.js, Material Design, WordPress, REST APIs, Python, Django, Flask, SQL, PostgreSQL, Redis, Firebase, Supabase, Docker, Heroku, Cloud, Linux, Git, Scrum, and a growth mindset.
+
+References from colleagues describe him as a reliable, friendly and structured team player who writes clear code and handles deadline pressure well.
+
+## Pages
+
+- [Portfolio](https://svenhaase.de/): Start page with the About me, Skill set, My work, References and Contact sections
+- [Legal notice](https://svenhaase.de/imprint): Imprint and terms of use
+- [Privacy policy](https://svenhaase.de/privacy): How personal data is handled (hosting at netcup, contact form)
+
+## Projects
+
+- [Pokedex (live demo)](https://pokedex.svenhaase.de/index.html): A data-driven digital Pokedex built with object-oriented JavaScript, HTML and CSS
+- [Pokedex (source code)](https://github.com/SiriusSagittarius/Pokedex): GitHub repository for the Pokedex
+- [El Pollo Loco (live demo)](https://epl.svenhaase.de/index.html): An object-oriented jump-and-run browser game with coin collecting, throwable objects and a final boss fight, built with JavaScript, HTML and CSS
+- [El Pollo Loco (source code)](https://github.com/SiriusSagittarius/El_Pollo_Loco): GitHub repository for El Pollo Loco
+
+## Contact
+
+- [Email](mailto:svenhaaseausmuch@gmail.com): The direct way to reach Sven
+- [LinkedIn](https://www.linkedin.com/in/sven-haase-685858398): Professional profile
+- [GitHub](https://github.com/SiriusSagittarius): All public repositories

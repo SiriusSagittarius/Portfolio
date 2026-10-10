@@ -3,11 +3,12 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { Subscription } from 'rxjs';
 import { DomSanitizer, SafeUrl } from '@angular/platform-browser';
+import { ScrollAnimate } from '../../../shared/directives/scroll-animate';
 
 @Component({
   selector: 'app-my-work',
   standalone: true,
-  imports: [CommonModule, TranslateModule],
+  imports: [CommonModule, TranslateModule, ScrollAnimate],
   templateUrl: './my-work.html',
   styleUrl: './my-work.scss',
 })

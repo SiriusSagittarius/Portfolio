@@ -13,13 +13,6 @@ body {
 .circle {
   @include circle(100px, $primary-color, $secondary-color);
 }
-@font-face {
-  font-family: 'Baloo';
-
-  font-weight: normal;
-  src: url('/assets/font/baloo/Baloo-Regular.ttf') format('truetype');
-  font-style: normal;
-}
 h1 {
   font-family: $secondary-font;
   color: $primary-color;

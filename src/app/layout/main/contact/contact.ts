@@ -4,11 +4,12 @@ import { Component, inject } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
 import { Router, RouterLink } from '@angular/router';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
+import { ScrollAnimate } from '../../../shared/directives/scroll-animate';
 
 @Component({
   selector: 'app-contact',
   standalone: true,
-  imports: [FormsModule, CommonModule, TranslateModule, RouterLink],
+  imports: [FormsModule, CommonModule, TranslateModule, RouterLink, ScrollAnimate],
   templateUrl: './contact.html',
   styleUrl: './contact.scss',
 })
