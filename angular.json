@@ -35,7 +35,7 @@
             "browser": "src/main.ts",
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "scss",
-            "assets": ["src/assets", "src/.htaccess", "public", "src/robots.txt"],
+            "assets": ["src/assets", "src/.htaccess", { "glob": "**/*", "input": "public" }],
             "styles": ["src/styles.scss"],
             "ssr": false,
             "prerender": false

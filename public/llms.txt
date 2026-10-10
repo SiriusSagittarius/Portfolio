@@ -1,0 +1,34 @@
+# Sven Haase
+
+> Portfolio of Sven Haase, a fullstack developer from Much (Rhein-Sieg district, near Cologne/Bonn), Germany. He combines Angular frontends with Python backends, is currently focused on Python development, and is open to remote work and to relocating.
+
+Sven builds web applications with Angular, TypeScript and Firebase on the frontend and Python on the backend. His motto is "Impossible is nothing": he looks for efficient, scalable solutions to technical problems, enjoys collaborative teams and likes turning complex problems into clean code.
+
+The website is a single-page Angular application in English and German, with a language switch in the navigation. Its sections are About me, Skill set, My work, References and Contact (a contact form).
+
+Skill set: Angular, TypeScript, JavaScript, HTML, CSS, RxJS, Vue.js, Material Design, WordPress, REST APIs, Python, Django, Flask, SQL, PostgreSQL, Redis, Firebase, Supabase, Docker, Heroku, Cloud, Linux, Git, Scrum, and a growth mindset.
+
+References from colleagues on the Pokedex, Join and El Pollo Loco projects describe him as a reliable, friendly and structured team player who writes clear code and handles deadline pressure well.
+
+## Pages
+
+- [Portfolio](https://svenhaase.de/): Start page with the About me, Skill set, My work, References and Contact sections
+- [Legal notice](https://svenhaase.de/imprint): Imprint and terms of use
+- [Privacy policy](https://svenhaase.de/privacy): How personal data is handled (hosting at netcup, contact form)
+
+## Projects
+
+- [DaBubble](https://dabubble.svenhaase.de/): Slack-inspired team chat with real-time messaging, direct messages, channels, threads and emoji reactions; Angular, TypeScript, Firebase Auth and Firestore; team project ([source](https://github.com/SiriusSagittarius/dabubble-2))
+- [PollApp](https://pollapp.svenhaase.de/): Create and share live polls with real-time evaluation of the results; Angular, TypeScript, Firebase ([source](https://github.com/SiriusSagittarius/pollapp))
+- [Shooter](https://shooter.svenhaase.de/): 3D first-person shooter in the browser where you can also drive a car or fly a broomstick; Angular, Three.js, TypeScript ([source](https://github.com/SiriusSagittarius/3d-shooter))
+- [Sauerei](https://sauerei.web.app): Arcade game in the style of Moorhuhn (Crazy Chicken) with a fast, simple game mechanic; Angular, TypeScript ([source](https://github.com/SiriusSagittarius/Sau))
+- [EasyTV](https://easy-tv.org/): Kodi fork and multimedia player with an integrated webview and adblocker for Android, Windows and Linux; Java, JavaScript, C++, Python ([source](https://github.com/SiriusSagittarius/easy-tv_Windows))
+- [Join](https://join.svenhaase.de/): Kanban task manager with drag and drop, ticket assignment and categories; JavaScript, HTML, CSS ([source](https://github.com/SiriusSagittarius/join))
+- [El Pollo Loco](https://epl.svenhaase.de/): Object-oriented jump-and-run browser game with coin collecting, throwable objects and a final boss fight; JavaScript, HTML, CSS ([source](https://github.com/SiriusSagittarius/EL_POLLO_LOCO))
+- [Pokedex](https://pokedex.svenhaase.de/): Data-driven digital Pokedex built on a REST API with object-oriented JavaScript, HTML and CSS ([source](https://github.com/SiriusSagittarius/pokedex))
+
+## Contact
+
+- [Email](mailto:info@svenhaase.de): The direct way to reach Sven
+- [LinkedIn](https://www.linkedin.com/in/sven-haase-685858398): Professional profile
+- [GitHub](https://github.com/SiriusSagittarius): All public repositories

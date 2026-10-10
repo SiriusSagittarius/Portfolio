@@ -4,7 +4,6 @@ import {
   OnDestroy,
   AfterViewInit,
   ElementRef,
-  HostListener,
   inject,
 } from '@angular/core';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
@@ -27,32 +26,16 @@ export class Header implements OnInit, OnDestroy, AfterViewInit {
   constructor(public translateService: TranslateService) {}
 
   ngOnInit(): void {
-    this.addScrollAnimation();
-    
-   
     this.updateMetaTags();
 
-    
+
     this.translateService.onLangChange.subscribe(() => {
       this.updateMetaTags();
     });
   }
 
   ngAfterViewInit(): void {
-    this.updateHeaderHeight();
-  }
-
-  @HostListener('window:resize')
-  onResize() {
-    this.updateHeaderHeight();
-  }
-
-  private updateHeaderHeight(): void {
-    
-    if (typeof document !== 'undefined') {
-      const headerHeight = this.elementRef.nativeElement.offsetHeight;
-      document.documentElement.style.setProperty('--header-height', `${headerHeight}px`);
-    }
+    this.addScrollAnimation();
   }
 
   ngOnDestroy(): void {
@@ -60,27 +43,35 @@ export class Header implements OnInit, OnDestroy, AfterViewInit {
   }
 
   /**
-   * Adds smooth scroll animation to scroll indicator
+   * Adds smooth scroll animation to scroll indicator.
+   * Scroll-Position und Viewport-Höhe werden höchstens einmal pro Frame gelesen
+   * (requestAnimationFrame), damit kein erzwungener Reflow entsteht.
    */
   private addScrollAnimation(): void {
+    const scrollLine = this.elementRef.nativeElement.querySelector(
+      '.header-btn-box-scroll-line',
+    ) as HTMLElement | null;
+
+    if (!scrollLine) {
+      return;
+    }
+
+    let frameRequested = false;
     this.scrollListener = () => {
-      const scrollLine = document.querySelector(
-        '.header-btn-box-scroll-line',
-      ) as HTMLElement | null;
-
-      if (scrollLine) {
-        const scrollPercent = (window.scrollY / window.innerHeight) * 100;
-        scrollLine.style.opacity = Math.max(0, 1 - scrollPercent / 100).toString();
-
-        if (window.scrollY > window.innerHeight) {
-          scrollLine.style.display = 'none';
-        } else {
-          scrollLine.style.display = 'block';
-        }
+      if (frameRequested) {
+        return;
       }
+      frameRequested = true;
+
+      requestAnimationFrame(() => {
+        frameRequested = false;
+        const progress = window.scrollY / window.innerHeight;
+        scrollLine.style.opacity = Math.max(0, 1 - progress).toString();
+        scrollLine.style.display = progress > 1 ? 'none' : 'block';
+      });
     };
 
-    window.addEventListener('scroll', this.scrollListener);
+    window.addEventListener('scroll', this.scrollListener, { passive: true });
   }
 
   

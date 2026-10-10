@@ -1,3 +1,11 @@
+<IfModule mod_mime.c>
+  # Fehlende MIME-Typen nachtragen – ohne Content-Type greift ExpiresByType nicht
+  AddType image/webp .webp
+  AddType font/woff2 .woff2
+  AddType image/x-icon .ico
+  AddCharset utf-8 .txt
+</IfModule>
+
 <IfModule mod_deflate.c>
   # Aktiviere GZIP-Kompression für diese Dateitypen
   AddOutputFilterByType DEFLATE text/html
@@ -11,11 +19,27 @@
 <IfModule mod_expires.c>
   ExpiresActive On
   ExpiresByType image/jpeg "access plus 1 year"
+  ExpiresByType image/png "access plus 1 year"
   ExpiresByType image/webp "access plus 1 year"
   ExpiresByType image/svg+xml "access plus 1 year"
+  ExpiresByType image/x-icon "access plus 1 year"
   ExpiresByType text/css "access plus 1 month"
   ExpiresByType application/javascript "access plus 1 month"
   ExpiresByType font/woff2 "access plus 1 year"
+</IfModule>
+
+<IfModule mod_headers.c>
+  # Von Angular gehashte Dateien (main-36LN3HRM.js, chunk-…, styles-…, media/…):
+  # Der Name ändert sich bei jeder Inhaltsänderung, deshalb 1 Jahr + immutable
+  <FilesMatch "-[A-Z0-9]{8}\.(js|css|woff2|png|jpe?g|webp|svg|gif)$">
+    Header set Cache-Control "public, max-age=31536000, immutable"
+  </FilesMatch>
+
+  # index.html, Übersetzungen (assets/i18n), llms.txt, robots.txt:
+  # Immer beim Server nachfragen, damit ein neuer Deploy sofort ankommt
+  <FilesMatch "\.(html|json|txt)$">
+    Header set Cache-Control "no-cache"
+  </FilesMatch>
 </IfModule>
 
 
