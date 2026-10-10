@@ -1,10 +1,10 @@
 import { ApplicationConfig, importProvidersFrom } from '@angular/core';
+import { provideClientHydration, withEventReplay } from '@angular/platform-browser';
 import { provideRouter, withInMemoryScrolling } from '@angular/router';
 import { routes } from './app.routes';
 
-import { provideHttpClient, withFetch } from '@angular/common/http';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
-import { TranslateHttpLoader, TRANSLATE_HTTP_LOADER_CONFIG } from '@ngx-translate/http-loader';
+import { BundledTranslateLoader } from './shared/i18n/translate-loader';
 
 export const appConfig: ApplicationConfig = {
   providers: [
@@ -12,21 +12,15 @@ export const appConfig: ApplicationConfig = {
       routes,
       withInMemoryScrolling({ scrollPositionRestoration: 'top', anchorScrolling: 'enabled' }),
     ),
-    provideHttpClient(withFetch()),
+    // Uebernimmt das vorgerenderte HTML, statt alles neu zu zeichnen
+    provideClientHydration(withEventReplay()),
     importProvidersFrom(
       TranslateModule.forRoot({
         loader: {
           provide: TranslateLoader,
-          useClass: TranslateHttpLoader,
+          useClass: BundledTranslateLoader,
         },
       }),
     ),
-    {
-      provide: TRANSLATE_HTTP_LOADER_CONFIG,
-      useValue: {
-        prefix: './assets/i18n/',
-        suffix: '.json',
-      },
-    },
   ],
 };

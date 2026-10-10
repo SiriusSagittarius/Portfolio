@@ -2,10 +2,11 @@ import {
   Component,
   OnInit,
   OnDestroy,
-  AfterViewInit,
   ElementRef,
+  afterNextRender,
   inject,
 } from '@angular/core';
+import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { NgOptimizedImage } from '@angular/common';
 import { Meta, Title } from '@angular/platform-browser';
@@ -17,25 +18,22 @@ import { Meta, Title } from '@angular/platform-browser';
   templateUrl: './header.html',
   styleUrls: ['./header.scss'],
 })
-export class Header implements OnInit, OnDestroy, AfterViewInit {
+export class Header implements OnInit, OnDestroy {
   private scrollListener: (() => void) | null = null;
   private elementRef = inject(ElementRef);
   private titleService = inject(Title);
   private metaService = inject(Meta);
 
-  constructor(public translateService: TranslateService) {}
+  constructor(public translateService: TranslateService) {
+    // Nur im Browser (nicht beim Prerendern): dort gibt es kein window
+    afterNextRender(() => this.addScrollAnimation());
+    this.translateService.onLangChange
+      .pipe(takeUntilDestroyed())
+      .subscribe(() => this.updateMetaTags());
+  }
 
   ngOnInit(): void {
     this.updateMetaTags();
-
-
-    this.translateService.onLangChange.subscribe(() => {
-      this.updateMetaTags();
-    });
-  }
-
-  ngAfterViewInit(): void {
-    this.addScrollAnimation();
   }
 
   ngOnDestroy(): void {

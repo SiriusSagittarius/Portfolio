@@ -31,10 +31,14 @@ ng generate --help
 To build the project run:
 
 ```bash
-ng build
+npm run build
 ```
 
 This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+
+All pages (`/`, `/imprint`, `/privacy`) are prerendered to static HTML, so the content is visible before any JavaScript runs. `npm run build` then runs `scripts/postbuild.mjs`, which loads the Angular JavaScript only after the page has finished loading. Plain `ng build` works too, but skips that step.
+
+Upload the contents of `dist/portfolio/browser/` (including the hidden `.htaccess`) to the web server.
 
 ## Running unit tests
 

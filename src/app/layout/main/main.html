@@ -1,8 +1,42 @@
 <main>
   <app-header></app-header>
-  <app-hero></app-hero>
-  <app-skill-set></app-skill-set>
-  <app-my-work></app-my-work>
-  <app-references></app-references>
-  <app-contact></app-contact>
+
+  <!--
+    Alles unterhalb des Headers wird per @defer erst gerendert, sobald der
+    Nutzer interagiert (Scrollen, Tippen, Taste) oder die Sektion sichtbar wird.
+    Das hält den ersten Render klein (LCP/TBT). Die Anker liegen bewusst
+    ausserhalb der @defer-Blöcke, damit #skills, #work … immer existieren.
+  -->
+  @defer (on viewport; when activated(); prefetch on idle) {
+    <app-hero></app-hero>
+  } @placeholder {
+    <div class="defer-placeholder defer-hero"></div>
+  }
+
+  <span id="skills"></span>
+  @defer (on viewport; when activated(); prefetch on idle) {
+    <app-skill-set></app-skill-set>
+  } @placeholder {
+    <div class="defer-placeholder defer-skills"></div>
+  }
+
+  <span id="work"></span>
+  @defer (on viewport; when activated(); prefetch on idle) {
+    <app-my-work></app-my-work>
+  } @placeholder {
+    <div class="defer-placeholder defer-work"></div>
+  }
+
+  @defer (on viewport; when activated(); prefetch on idle) {
+    <app-references></app-references>
+  } @placeholder {
+    <div class="defer-placeholder defer-references"></div>
+  }
+
+  <span id="contact"></span>
+  @defer (on viewport; when activated(); prefetch on idle) {
+    <app-contact></app-contact>
+  } @placeholder {
+    <div class="defer-placeholder defer-contact"></div>
+  }
 </main>

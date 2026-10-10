@@ -29,7 +29,10 @@
   "myWork": {
     "title": "Projekte",
     "hero": "Folgend finden Sie eine Übersicht meiner Projekte.",
-    "pokedex": "Digitales Pokedex-Register: Entwicklung einer datengetriebenen Anwendung basierend auf einem objektorientierten Ansatz. Ein Projekt, das moderne Web-Technologien mit der Logik eines digitalen Lexikons verbindet!",
+    "videoflix": "Backend für Videoflix, eine Video-Streaming-Plattform: Registrierung mit E-Mail-Aktivierung, JWT-Login über HttpOnly-Cookies und Passwort-Reset. Hochgeladene Videos werden im Hintergrund mit FFmpeg in HLS mit 480p, 720p und 1080p umgewandelt (Redis-Queue, PostgreSQL, Docker).",
+    "quizly": "Backend für Quizly, das aus einem YouTube-Video ein Multiple-Choice-Quiz macht: Die Tonspur wird lokal mit Whisper AI transkribiert, Google Gemini Flash schreibt daraus 10 Fragen. Django REST API mit JWT in HttpOnly-Cookies.",
+    "coderr": "Backend für Coderr, eine Freelancer-Plattform: Anbieter veröffentlichen Angebote in drei Paketen, Kunden buchen sie und geben Bewertungen ab. REST-API mit Django REST Framework, Token-Authentifizierung, Filtern und Rechten je Benutzerrolle.",
+    "kanmind": "REST-Backend für das Kanban-Board KanMind: Boards mit Mitgliedern, Aufgaben mit Status, Priorität, Bearbeiter und Prüfer sowie Kommentare. Token-Authentifizierung und Berechtigungen auf Objektebene mit Django REST Framework.",
     "epl": "Jump and Run Spiel basierend auf einem Objektorientierten Ansatz. Einsammeln von Münzen, werfen von Objekten und ein spezieller Endboss-Kampf!",
     "join": "Aufgabenmanagementsystem basierend auf dem Kanban-Modell. Erstellung und Organisation von Aufgaben inklusive Drag-and-Drop-Funktion sowie Ticketzuordnung und Kategorienstruktur.",
     "dabubble": "Slack-inspirierte Team-Chat-Anwendung mit Echtzeit-Messaging: Direktnachrichten, Channels, Threads und Emoji-Reaktionen. Umgesetzt mit Angular im Frontend und Firebase (Auth & Firestore) als Backend – im Team entwickelt.",

@@ -52,11 +52,13 @@
   .legal-section {
     margin-bottom: 50px;
 
-    h3 {
+    // h2 (fuer korrekte Ueberschriften-Reihenfolge), sieht aus wie die frueheren h3
+    h2 {
       text-align: left;
       font-size: 24px;
+      line-height: 1;
       color: #4b8efc;
-      margin-bottom: 15px;
+      margin: 0 0 15px;
       font-weight: 700;
     }
 

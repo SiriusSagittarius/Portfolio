@@ -36,10 +36,30 @@
     </div>
 
     <div class="carousel-dots" appScrollAnimation="fade-up" style="transition-delay: 0.2s">
-      <span class="dot" [class.active]="currentIndex === 0" (click)="setIndex(0)"></span>
-      <span class="dot" [class.active]="currentIndex === 1" (click)="setIndex(1)"></span>
-      <span class="dot" [class.active]="currentIndex === 2" (click)="setIndex(2)"></span>
+      <button
+        type="button"
+        class="dot"
+        [class.active]="currentIndex === 0"
+        [attr.aria-current]="currentIndex === 0"
+        (click)="setIndex(0)"
+        aria-label="Reference 1"
+      ></button>
+      <button
+        type="button"
+        class="dot"
+        [class.active]="currentIndex === 1"
+        [attr.aria-current]="currentIndex === 1"
+        (click)="setIndex(1)"
+        aria-label="Reference 2"
+      ></button>
+      <button
+        type="button"
+        class="dot"
+        [class.active]="currentIndex === 2"
+        [attr.aria-current]="currentIndex === 2"
+        (click)="setIndex(2)"
+        aria-label="Reference 3"
+      ></button>
     </div>
   </div>
 </section>
-<span id="contact"></span>

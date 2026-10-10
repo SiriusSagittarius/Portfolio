@@ -1,21 +1,20 @@
 import { NgOptimizedImage } from '@angular/common';
-import { HttpClient } from '@angular/common/http';
 import { Component, inject, signal } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
 import { Router, RouterLink } from '@angular/router';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
+import { ScrollAnimationDirective } from '../../../shared/directives/scroll-animation.directive';
 
 @Component({
   selector: 'app-contact',
   standalone: true,
-  imports: [FormsModule, TranslateModule, RouterLink, NgOptimizedImage],
+  imports: [FormsModule, TranslateModule, RouterLink, NgOptimizedImage, ScrollAnimationDirective],
   templateUrl: './contact.html',
   styleUrls: ['./contact.scss'],
 })
 export class Contact {
   translateService = inject(TranslateService);
   private router = inject(Router);
-  http = inject(HttpClient);
 
   readOrNot: boolean = false;
   isSuccessMessageVisible = signal(false);
@@ -26,14 +25,12 @@ export class Contact {
     message: '',
   };
 
+  // Natives fetch statt HttpClient: spart das HttpClient-Paket im Start-Bundle
   post = {
     endPoint: 'https://svenhaase.de/sendMail.php',
-    body: (payload: any) => JSON.stringify(payload),
-    options: {
-      headers: {
-        'Content-Type': 'text/plain',
-      },
-      responseType: 'text' as const,
+    body: (payload: { name: string; email: string; message: string }) => JSON.stringify(payload),
+    headers: {
+      'Content-Type': 'text/plain',
     },
   };
 
@@ -43,7 +40,7 @@ export class Contact {
     });
   }
 
-  onSubmit(ngForm: NgForm) {
+  async onSubmit(ngForm: NgForm) {
     if (ngForm.valid && ngForm.submitted) {
       if (!this.readOrNot) {
         console.error('Please accept the privacy policy');
@@ -51,18 +48,20 @@ export class Contact {
         return;
       }
 
-      this.http
-        .post(this.post.endPoint, this.post.body(this.contactData), this.post.options)
-        .subscribe({
-          next: (response) => {
-            ngForm.resetForm();
-            this.showSuccessMessage();
-          },
-          error: (error) => {
-            console.error('Error submitting form:', error);
-          },
-          complete: () => {},
+      try {
+        const response = await fetch(this.post.endPoint, {
+          method: 'POST',
+          headers: this.post.headers,
+          body: this.post.body(this.contactData),
         });
+        if (!response.ok) {
+          throw new Error(`HTTP ${response.status}`);
+        }
+        ngForm.resetForm();
+        this.showSuccessMessage();
+      } catch (error) {
+        console.error('Error submitting form:', error);
+      }
     }
   }
 

@@ -1,0 +1,74 @@
+// Platzhalter fuer die @defer-Sektionen. Die Hoehen entsprechen ungefaehr den
+// echten Sektionen, damit Anker-Spruenge (#work, #contact) an der richtigen
+// Stelle landen und nichts springt, wenn der Inhalt nachgerendert wird.
+.defer-placeholder {
+  display: block;
+}
+
+.defer-hero {
+  height: 100vh;
+  height: 100dvh;
+}
+.defer-skills {
+  height: 1340px;
+}
+.defer-work {
+  height: 7600px;
+}
+.defer-references {
+  height: 855px;
+}
+.defer-contact {
+  height: 1020px;
+}
+
+@media (max-width: 1119px) {
+  .defer-work {
+    height: 10450px;
+  }
+}
+
+@media (max-width: 1050px) {
+  .defer-skills {
+    height: 1970px;
+  }
+}
+
+@media (max-width: 1025px) {
+  .defer-hero {
+    height: 1100px;
+  }
+  .defer-contact {
+    height: 1110px;
+  }
+}
+
+@media (max-width: 900px) {
+  .defer-references {
+    height: 720px;
+  }
+}
+
+@media (max-width: 800px) {
+  .defer-skills {
+    height: 2480px;
+  }
+  .defer-work {
+    height: 11150px;
+  }
+}
+
+@media (max-width: 500px) {
+  .defer-work {
+    height: 10100px;
+  }
+}
+
+@media (max-width: 450px) {
+  .defer-hero {
+    height: 1450px;
+  }
+  .defer-contact {
+    height: 1190px;
+  }
+}

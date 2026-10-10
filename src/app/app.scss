@@ -1,0 +1,16 @@
+// Reserviert mindestens eine Bildschirmhöhe für die Seite, damit der Footer
+// nicht kurz oben erscheint und dann nach unten springt (CLS), während eine
+// lazy geladene Route (Impressum/Datenschutz) noch lädt.
+.page-content {
+  min-height: 100vh;
+  min-height: 100dvh;
+}
+
+// Platzhalter in Footer-Hoehe, bis der Footer per @defer gerendert wird
+.footer-placeholder {
+  height: 260px;
+
+  @media (max-width: 1025px) {
+    height: 570px;
+  }
+}

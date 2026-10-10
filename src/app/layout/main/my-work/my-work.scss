@@ -117,7 +117,10 @@
   }
   .tech-stack {
     text-align: left;
-    line-height: 0;
+    // line-height 0 liess umbrechende Stacks (z. B. Videoflix) uebereinander
+    // laufen; Margins so gewaehlt, dass einzeilige Stacks gleich hoch bleiben
+    line-height: 1.3;
+    margin: 6px 0;
     font-size: 17px;
     font-weight: 500;
   }
@@ -403,17 +406,39 @@ h1 {
   }
 }
 
-// --- Deko-Kreise aus den Projekt-Titeln heraushalten (gewinnt gegen alles) ---
-// Auf zentriertem Mobile-Layout liegen circle-2/circle-4 sonst hinter den
-// Titeln (DaBubble bei ~47%, Shooter bei ~71% der Sektionshoehe) -> blau auf
-// blau. Die Titel sind je nur ~1% hoch; die Kreise werden vertikal in die
-// titelfreien Luecken geschoben (Mitte zwischen zwei Projektzeilen).
+// --- Deko-Kreise aus Projekt-Titeln und -Texten heraushalten (gewinnt gegen alles) ---
+// Bei 11 Projekten ist jede Projektzeile ca. 9% der Sektion hoch. Im
+// einspaltigen Layout sitzen die Kreise mittig hinter einem Projektbild und
+// schauen nur am Rand hervor -> nie blau hinter Text.
+@media (max-width: 1119px) {
+  .my-work .my-work-div-circle-1 {
+    top: calc(22.5% - 195px); // hinter dem Coderr-Bild
+  }
+}
+@media (max-width: 720px) {
+  .my-work .my-work-div-circle-1 {
+    top: calc(22.5% - 95px);
+  }
+}
 @media (max-width: 1024px) {
   .my-work .my-work-div-circle-2 {
-    top: 52%; // Luecke unter DaBubble-Titel (47%), vor PollApp (60%)
+    top: calc(50.4% - 275px); // hinter dem El-Pollo-Loco-Bild
   }
   .my-work .my-work-div-circle-4 {
-    top: 76%; // Luecke unter Shooter-Titel (71%), vor Sauerei (83%)
+    top: calc(76.5% - 115px); // hinter dem Shooter-Bild
+  }
+}
+@media (max-width: 720px) {
+  .my-work .my-work-div-circle-2 {
+    top: calc(50.4% - 150px);
+  }
+}
+
+// Desktop: der kleine Kreis sitzt links in der Luecke zwischen DaBubble-Bild
+// und PollApp-Titel statt in einer Projektbeschreibung
+@media (min-width: 1120px) {
+  .my-work .my-work-div-circle-3 {
+    top: calc(67.8% - 25px);
   }
 }
 

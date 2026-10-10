@@ -18,6 +18,10 @@ References from colleagues on the Pokedex, Join and El Pollo Loco projects descr
 
 ## Projects
 
+- [Videoflix](https://videoflix.svenhaase.de/): Backend for a video streaming platform with email activation, JWT login in HttpOnly cookies, password reset and background conversion of uploads to HLS (480p, 720p, 1080p) with FFmpeg; Python, Django REST Framework, PostgreSQL, Redis, Docker ([source](https://github.com/SiriusSagittarius/Videoflix))
+- [Quizly](https://quizly.svenhaase.de/): Backend that turns a YouTube video into a multiple-choice quiz: local transcription with Whisper AI, quiz generation with Google Gemini Flash; Python, Django REST Framework, JWT ([source](https://github.com/SiriusSagittarius/Quizly))
+- [Coderr](https://coderr.svenhaase.de/): Backend for a freelancer marketplace where business users publish offers in three packages and customers book and review them; Python, Django REST Framework, token authentication ([source](https://github.com/SiriusSagittarius/coderr))
+- [KanMind](https://kanmind.svenhaase.de/): Backend for a Kanban board with boards, members, tasks, reviewers and comments; Python, Django REST Framework, token authentication, object-level permissions ([source](https://github.com/SiriusSagittarius/KanMind))
 - [DaBubble](https://dabubble.svenhaase.de/): Slack-inspired team chat with real-time messaging, direct messages, channels, threads and emoji reactions; Angular, TypeScript, Firebase Auth and Firestore; team project ([source](https://github.com/SiriusSagittarius/dabubble-2))
 - [PollApp](https://pollapp.svenhaase.de/): Create and share live polls with real-time evaluation of the results; Angular, TypeScript, Firebase ([source](https://github.com/SiriusSagittarius/pollapp))
 - [Shooter](https://shooter.svenhaase.de/): 3D first-person shooter in the browser where you can also drive a car or fly a broomstick; Angular, Three.js, TypeScript ([source](https://github.com/SiriusSagittarius/3d-shooter))
@@ -25,7 +29,6 @@ References from colleagues on the Pokedex, Join and El Pollo Loco projects descr
 - [EasyTV](https://easy-tv.org/): Kodi fork and multimedia player with an integrated webview and adblocker for Android, Windows and Linux; Java, JavaScript, C++, Python ([source](https://github.com/SiriusSagittarius/easy-tv_Windows))
 - [Join](https://join.svenhaase.de/): Kanban task manager with drag and drop, ticket assignment and categories; JavaScript, HTML, CSS ([source](https://github.com/SiriusSagittarius/join))
 - [El Pollo Loco](https://epl.svenhaase.de/): Object-oriented jump-and-run browser game with coin collecting, throwable objects and a final boss fight; JavaScript, HTML, CSS ([source](https://github.com/SiriusSagittarius/EL_POLLO_LOCO))
-- [Pokedex](https://pokedex.svenhaase.de/): Data-driven digital Pokedex built on a REST API with object-oriented JavaScript, HTML and CSS ([source](https://github.com/SiriusSagittarius/pokedex))
 
 ## Contact
 

@@ -38,16 +38,20 @@
             EN
           </button>
         </div>
-        <div class="nav-mobile" (click)="toggle()" [class.open]="isChecked">
-          <img src="./assets/img/icons/burger/burger.svg" alt="Menu" />
-        </div>
+        <button
+          type="button"
+          class="nav-mobile"
+          (click)="toggle()"
+          [class.open]="isChecked"
+          [attr.aria-expanded]="isChecked"
+          aria-label="Menu"
+        >
+          <img src="./assets/img/icons/burger/burger.svg" alt="" />
+        </button>
         @if (showBackButton) {
-          <img
-            class="nav-back"
-            src="./assets/img/icons/go_up/navback.svg"
-            alt="Scroll to top"
-            (click)="scrollToTop()"
-          />
+          <button type="button" class="nav-back" (click)="scrollToTop()" aria-label="Back to start">
+            <img src="./assets/img/icons/go_up/navback.svg" alt="" />
+          </button>
         }
       </div>
     </div>
@@ -56,7 +60,6 @@
 
 @if (showOverlay) {
   <div
-    appScrollAnimation="fade-in-left"
     class="nav-overlay"
     (click)="closeMenu()"
     [class.active]="showOverlay"

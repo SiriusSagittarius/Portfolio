@@ -59,12 +59,19 @@
   align-items: center;
   padding: 0 30px;
 
-  &-back {
-    display: none;
-  }
-
+  // Burger und Zurueck-Pfeil sind echte Buttons (Tastatur-bedienbar)
+  &-back,
   &-mobile {
     display: none;
+    background: none;
+    border: 0;
+    padding: 0;
+  }
+
+  &-back img {
+    display: block;
+    width: 100%;
+    height: 100%;
   }
   &-language-switch {
     display: flex;

@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import { TranslateModule } from '@ngx-translate/core';
+import { ScrollAnimationDirective } from '../../../shared/directives/scroll-animation.directive';
 
 @Component({
   selector: 'app-references',
   standalone: true,
-  imports: [TranslateModule],
+  imports: [TranslateModule, ScrollAnimationDirective],
   templateUrl: './references.html',
   styleUrls: ['./references.scss'],
 })

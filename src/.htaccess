@@ -43,11 +43,28 @@
 </IfModule>
 
 
+<IfModule mod_dir.c>
+  # Kein 301 von /imprint auf /imprint/ – die Regel unten liefert die
+  # vorgerenderte Seite direkt aus
+  DirectorySlash Off
+</IfModule>
+
 <IfModule mod_rewrite.c>
   RewriteEngine On
   RewriteBase /
   RewriteRule ^index\.html$ - [L]
+
+  # Vorgerenderte Seiten (Angular Prerendering): /imprint -> /imprint/index.html
+  RewriteCond %{REQUEST_URI} !/$
+  RewriteCond %{DOCUMENT_ROOT}%{REQUEST_URI}/index.html -f
+  RewriteRule ^(.+)$ /$1/index.html [L]
+
   RewriteCond %{REQUEST_FILENAME} !-f
   RewriteCond %{REQUEST_FILENAME} !-d
+  # Nur Angular-Routen (/imprint, /privacy …) auf index.html umleiten.
+  # Fehlende Dateien (z. B. /.well-known/ai-catalog.json, alte Bilder) liefern
+  # so ein echtes 404 statt HTML mit Status 200.
+  RewriteCond %{REQUEST_URI} !^/\.well-known/
+  RewriteCond %{REQUEST_URI} !\.[a-zA-Z0-9]+$
   RewriteRule . /index.html [L]
 </IfModule>

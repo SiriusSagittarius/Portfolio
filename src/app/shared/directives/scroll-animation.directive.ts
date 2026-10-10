@@ -1,4 +1,5 @@
-import { Directive, ElementRef, OnInit, OnDestroy, Renderer2, Input } from '@angular/core';
+import { Directive, ElementRef, OnInit, OnDestroy, Renderer2, Input, PLATFORM_ID, inject } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
 
 @Directive({
   selector: '[appScrollAnimation]',
@@ -8,7 +9,8 @@ export class ScrollAnimationDirective implements OnInit, OnDestroy {
   // Standard-Animation ist 'fade-in-up', kann aber im HTML überschrieben werden
   @Input() appScrollAnimation: string = 'fade-in-up';
 
-  private observer!: IntersectionObserver;
+  private observer?: IntersectionObserver;
+  private isBrowser = isPlatformBrowser(inject(PLATFORM_ID));
 
   constructor(
     private el: ElementRef,
@@ -16,6 +18,12 @@ export class ScrollAnimationDirective implements OnInit, OnDestroy {
   ) {}
 
   ngOnInit() {
+    // Beim Prerendern nichts verstecken: dort gibt es keinen IntersectionObserver,
+    // der die Elemente wieder einblenden würde
+    if (!this.isBrowser) {
+      return;
+    }
+
     // Element initial verstecken und Animations-Klasse setzen
     this.renderer.addClass(this.el.nativeElement, 'hidden-animate');
     if (this.appScrollAnimation) {
@@ -44,8 +52,6 @@ export class ScrollAnimationDirective implements OnInit, OnDestroy {
   }
 
   ngOnDestroy() {
-    if (this.observer) {
-      this.observer.disconnect();
-    }
+    this.observer?.disconnect();
   }
 }

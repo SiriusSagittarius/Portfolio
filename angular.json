@@ -37,8 +37,8 @@
             "inlineStyleLanguage": "scss",
             "assets": ["src/assets", "src/.htaccess", { "glob": "**/*", "input": "public" }],
             "styles": ["src/styles.scss"],
-            "ssr": false,
-            "prerender": false
+            "server": "src/main.server.ts",
+            "outputMode": "static"
           },
           "configurations": {
             "production": {
