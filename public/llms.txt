@@ -27,7 +27,7 @@ References from colleagues on the Pokedex, Join and El Pollo Loco projects descr
 - [Shooter](https://shooter.svenhaase.de/): 3D first-person shooter in the browser where you can also drive a car or fly a broomstick; Angular, Three.js, TypeScript ([source](https://github.com/SiriusSagittarius/3d-shooter))
 - [Sauerei](https://sauerei.web.app): Arcade game in the style of Moorhuhn (Crazy Chicken) with a fast, simple game mechanic; Angular, TypeScript ([source](https://github.com/SiriusSagittarius/Sau))
 - [EasyTV](https://easy-tv.org/): Kodi fork and multimedia player with an integrated webview and adblocker for Android, Windows and Linux; Java, JavaScript, C++, Python ([source](https://github.com/SiriusSagittarius/easy-tv_Windows))
-- [Join](https://join.svenhaase.de/): Kanban task manager with drag and drop, ticket assignment and categories; JavaScript, HTML, CSS ([source](https://github.com/SiriusSagittarius/join))
+- [Join](https://join.svenhaase.de/): Kanban task manager with drag and drop, ticket assignment and categories; JavaScript, HTML, CSS; team project ([source](https://github.com/SiriusSagittarius/join))
 - [El Pollo Loco](https://epl.svenhaase.de/): Object-oriented jump-and-run browser game with coin collecting, throwable objects and a final boss fight; JavaScript, HTML, CSS ([source](https://github.com/SiriusSagittarius/EL_POLLO_LOCO))
 
 ## Contact

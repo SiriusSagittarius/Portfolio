@@ -51,6 +51,9 @@
             <h3>{{ project.name | translate }}</h3>
           </div>
           <div class="my-work-language">
+            @if (project.team) {
+              <span class="team-badge">{{ 'myWork.team' | translate }}</span>
+            }
             <p class="tech-stack">{{ project.projectLanguage | translate }}</p>
           </div>
           <div class="my-work-div-content">

@@ -28,6 +28,7 @@
 
   "myWork": {
     "title": "Projekte",
+    "team": "Gruppenprojekt",
     "hero": "Folgend finden Sie eine Übersicht meiner Projekte.",
     "videoflix": "Backend für Videoflix, eine Video-Streaming-Plattform: Registrierung mit E-Mail-Aktivierung, JWT-Login über HttpOnly-Cookies und Passwort-Reset. Hochgeladene Videos werden im Hintergrund mit FFmpeg in HLS mit 480p, 720p und 1080p umgewandelt (Redis-Queue, PostgreSQL, Docker).",
     "quizly": "Backend für Quizly, das aus einem YouTube-Video ein Multiple-Choice-Quiz macht: Die Tonspur wird lokal mit Whisper AI transkribiert, Google Gemini Flash schreibt daraus 10 Fragen. Django REST API mit JWT in HttpOnly-Cookies.",
