@@ -100,6 +100,9 @@
     "footer": "For any questions or notices, please contact us at Email: info@svenhaase.de ",
     "date": "Date: April 26, 2026"
   },
+  "footer": {
+    "legal": "Legal Notice"
+  },
   "privacy": {
     "title": "Privacy Policy",
     "h1_allg": "1. Data protection at a glance",

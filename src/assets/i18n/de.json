@@ -101,6 +101,9 @@
     "footer": "Bei Fragen oder Hinweisen kontaktieren Sie uns bitte unter Email: info@svenhaase.de.",
     "date": "Datum: 26. April 2026"
   },
+  "footer": {
+    "legal": "Impressum"
+  },
   "privacy": {
     "title": "Datenschutzerklärung",
     "h1_allg": "1. Datenschutz auf einen Blick",
